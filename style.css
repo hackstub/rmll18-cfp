@@ -3,31 +3,31 @@ html, body {
     padding: 0;
     font-size: 1rem;
 }
-
-#source {
-    font-family: monospace;
-    background-color: blue;
-    color: white;
-}
-section#trans {
-    height: 100%;
-    overflow: hidden;
-}
-h1 {
-    padding: 1em;
-    margin: 0;
+p {
     height: 100px;
 }
+#source {
+    font-family: monospace;
+    background-color: grey;
+    color: white;
+}
 #trans {
-    background-color: red;
+    height: calc(100% - 50px);
+    overflow: hidden;
+    background-color: white;
     position: fixed;
     top: 0;
 }
-
 #slider {
     height: 10px;
     width: 100%;
     background-color: yellow;
     position: fixed;
-    bottom: 0;
+    bottom: 50px;
+}
+
+h1 {
+    margin-top: 0.1em;
+    height: 100px;
+    font-size: 10em;
 }

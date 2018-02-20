@@ -2,10 +2,13 @@ var trans = document.getElementById('trans');
 var slider = document.getElementById('slider');
 
 slider.addEventListener('mousedown', sliderListener);
+window.addEventListener('scroll', (e) => {
+    trans.scrollTop = e.pageY;
+});
 
 function sliderListener(e) {
-    function removeListeners(e) {
-        changeHeight(e);
+    function removeListeners(event) {
+        changeHeight(event);
         window.removeEventListener("mousemove", changeHeight);
         window.removeEventListener("mouseup", removeListeners);
     }
