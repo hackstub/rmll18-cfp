@@ -1,4 +1,4 @@
-html, body{
+html, body {
     margin: 0;
     padding: 0;
     font-size: 1rem;
@@ -6,11 +6,11 @@ html, body{
 
 #source {
     font-family: monospace;
-    background-color: #0000ff80;
+    background-color: blue;
     color: white;
 }
-section#source {
-    height: 0;
+section#trans {
+    height: 100%;
     overflow: hidden;
 }
 h1 {
@@ -20,9 +20,8 @@ h1 {
 }
 #trans {
     background-color: red;
-    position: absolute;
+    position: fixed;
     top: 0;
-    z-index: -1;
 }
 
 #slider {
@@ -30,5 +29,5 @@ h1 {
     width: 100%;
     background-color: yellow;
     position: fixed;
-    top: 0;
+    bottom: 0;
 }

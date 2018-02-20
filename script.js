@@ -1,43 +1,25 @@
-var top = document.getElementById('source');
+var trans = document.getElementById('trans');
 var slider = document.getElementById('slider');
 
-function sliderListerner(e, action) {
+slider.addEventListener('mousedown', sliderListener);
+
+function sliderListener(e) {
     function removeListeners(e) {
-        action(e, true);
-        window.removeEventListener("mousemove", action);
+        changeHeight(e);
+        window.removeEventListener("mousemove", changeHeight);
         window.removeEventListener("mouseup", removeListeners);
     }
     e.preventDefault();
-    action(e);
+    changeHeight(e);
 
-    window.addEventListener("mousemove", action);
+    window.addEventListener("mousemove", changeHeight);
     window.addEventListener("mouseup", removeListeners);
 }
 
-function changeHeight(e, update) {
+function changeHeight(e) {
     var y = e.clientY;
     if (y >= 0) {
-        slider.style.top = y + 'px';
-        source.style.height = y + 'px';
-    } else {
-        slider.style.top = '0px';
+        slider.style.bottom = window.innerHeight - y + 'px';
+        trans.style.height = y + 'px';
     }
-
-    console.log(y);
-    // var trackWidth = this.trackBar.getBoundingClientRect().width;
-    //
-    // var currentTime;
-    // if (x >= trackWidth) currentTime = this.audio.duration;
-    // else if (x <= 0) currentTime = 0;
-    // else currentTime = (x / trackWidth) * this.audio.duration;
-    //
-    if (update === true) {
-        // _this.updateLoading();
-    }
-    // this.updateTrackGraphic(currentTime);
-}
-
-// init track slider listener
-slider.onmousedown = function(e) {
-    sliderListerner(e, changeHeight);
 }
