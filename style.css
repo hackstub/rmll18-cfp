@@ -1,18 +1,23 @@
+:root {
+    font-size: 1em;
+}
+
 html, body {
     margin: 0;
     padding: 0;
-    font-size: 1rem;
+    box-sizing: border-box;
+    color: black;
+    font-family: "Open Sans Regular";
 }
-p {
-    height: 100px;
-}
+
 #source {
-    font-family: monospace;
-    background-color: grey;
-    color: white;
+    font-family: 'Space Mono Regular';
+    font-size: 0.8rem;
+    background-color: black;
 }
 #trans {
-    height: calc(100% - 50px);
+    height: calc(100% - 250px);
+    width: 100%;
     overflow: hidden;
     background-color: white;
     position: fixed;
@@ -23,11 +28,134 @@ p {
     width: 100%;
     background-color: yellow;
     position: fixed;
-    bottom: 50px;
+    bottom: 250px;
 }
 
 h1 {
     margin-top: 0.1em;
     height: 100px;
-    font-size: 10em;
+    font-size: 10rem;
+}
+
+.main {
+    width: 90%;
+    margin: auto;
+}
+#source .main {
+    background-color: white;
+}
+#source .main::before {
+    content: '5%';
+    position: fixed;
+    left: calc(2.5% - 1em);
+    top: 50%;
+    transform: rotate(90deg);
+}
+#source .main::after {
+    content: '5%';
+    position: fixed;
+    right: calc(2.5% - 1em);
+    top: 50%;
+    transform: rotate(-90deg);
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+#trans p {
+    margin-bottom: 1rem;
+}
+
+#source p {
+    position: relative;
+    color: black;
+    border: 1px solid red;
+}
+#source .margin {
+    background-color: blue;
+    width: 100%;
+    height: 1rem;
+}
+#source .margin::before {
+    content: "margin-bottom: 1rem";
+    padding-left: 0.5rem;
+}
+#source p::before {
+    position: absolute;
+    bottom: 0;
+    content: 'paragraph';
+    background-color: black;
+    color: white;
+    padding: 0 0.5rem;
+}
+#source p::after {
+    content: 'class="normal"';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: red;
+    color: white;
+    padding: 0 0.5rem;
+}
+
+
+@font-face {
+ font-family: "Open Sans Light";
+ src: url("fonts/OpenSans-Light-webfont.woff") format("woff");
+}
+
+@font-face {
+ font-family: "Open Sans LightItalic";
+ src: url("fonts/OpenSans-LightItalic-webfont.woff") format("woff");
+}
+
+@font-face {
+ font-family: "Open Sans Regular";
+ src: url("fonts/OpenSans-Regular-webfont.woff") format("woff");
+}
+
+@font-face {
+ font-family: "Open Sans Italic";
+ src: url("fonts/OpenSans-Italic-webfont.woff") format("woff");
+}
+
+@font-face {
+ font-family: "Open Sans Semibold";
+ src: url("fonts/OpenSans-Semibold-webfont.woff") format("woff");
+}
+
+@font-face {
+ font-family: "Open Sans SemiboldItalic";
+ src: url("fonts/OpenSans-SemiboldItalic-webfont.woff") format("woff");
+}
+
+@font-face {
+ font-family: "Open Sans Bold";
+ src: url("fonts/OpenSans-Bold-webfont.woff") format("woff");
+}
+
+@font-face {
+ font-family: "Open Sans BoldItalic";
+ src: url("fonts/OpenSans-BoldItalic-webfont.woff") format("woff");
+}
+
+@font-face {
+ font-family: "Space Mono Regular";
+ src: url("fonts/SpaceMono-Regular-webfont.woff") format("woff");
+}
+
+@font-face {
+ font-family: "Space Mono Italic";
+ src: url("fonts/SpaceMono-Italic-webfont.woff") format("woff");
+}
+
+@font-face {
+ font-family: "Space Mono Bold";
+ src: url("fonts/SpaceMono-Bold-webfont.woff") format("woff");
+}
+
+@font-face {
+ font-family: "Space Mono BoldItalic";
+ src: url("fonts/SpaceMono-BoldItalic-webfont.woff") format("woff");
 }
