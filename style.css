@@ -10,10 +10,15 @@ html, body {
     font-family: "Open Sans Regular";
 }
 
+#rmllT, #rmllS {
+    margin: 5rem 0 1rem 0;
+    width: 40rem;
+}
+
 #source {
     font-family: 'Space Mono Regular';
     font-size: 0.8rem;
-    background-color: black;
+    background-color: #dffffd;
 }
 #trans {
     height: calc(100% - 250px);
@@ -26,15 +31,30 @@ html, body {
 #slider {
     height: 10px;
     width: 100%;
-    background-color: yellow;
+    background-color: black;
     position: fixed;
     bottom: 250px;
+    cursor: move;
+}
+#slider::before {
+    content: '< >';
+    text-align: center;
+    color: white;
+    position: absolute;
+    width: 2rem;
+    background-color: black;
+    transform: rotate(90deg);
+    left: calc(50vw - 1rem);
+    top: calc(-0.5rem + 2.5px);
 }
 
 h1 {
-    margin-top: 0.1em;
-    height: 100px;
-    font-size: 10rem;
+    margin: 0;
+    font-size: 5rem;
+}
+#source h1 {
+    margin-top: 0.5rem;
+    line-height: 6.6rem;
 }
 
 .main {
@@ -47,19 +67,21 @@ h1 {
 #source .main::before {
     content: '5%';
     position: fixed;
-    left: calc(2.5% - 1em);
+    left: calc(2.5% - 0.5rem);
     top: 50%;
     transform: rotate(90deg);
 }
 #source .main::after {
     content: '5%';
     position: fixed;
-    right: calc(2.5% - 1em);
+    right: calc(2.5% - 0.5rem);
     top: 50%;
     transform: rotate(-90deg);
 }
 
 p {
+    /* border: 1px solid grey; */
+    max-width: 55rem;
     margin: 0;
     padding: 0;
 }
@@ -68,37 +90,46 @@ p {
 }
 
 #source p {
+    box-sizing: border-box;
     position: relative;
     color: black;
-    border: 1px solid red;
+    border: 1px solid #8400ff;
+    padding: 0.2rem;
 }
 #source .margin {
-    background-color: blue;
-    width: 100%;
+    background-color: #ffff00;
     height: 1rem;
+    max-width: 55rem;
+
 }
 #source .margin::before {
+    font-size: 0.6rem;
     content: "margin-bottom: 1rem";
     padding-left: 0.5rem;
 }
 #source p::before {
+    /* font-size: 0.6rem; */
+    left: -2rem;
+    width: 1rem;
+    height: calc(1.2rem + 1px);
     position: absolute;
-    bottom: 0;
-    content: 'paragraph';
-    background-color: black;
+    top: -1px;
+    content: 'p';
+    background-color: #8400ff;
     color: white;
     padding: 0 0.5rem;
 }
 #source p::after {
+    font-size: 0.6rem;
+
     content: 'class="normal"';
     position: absolute;
     bottom: 0;
     right: 0;
-    background-color: red;
+    background-color: black;
     color: white;
     padding: 0 0.5rem;
 }
-
 
 @font-face {
  font-family: "Open Sans Light";

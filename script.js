@@ -1,9 +1,10 @@
-
 'use strict';
 
 var trans = document.getElementById('trans');
 var slider = document.getElementById('slider');
-setSourceBlockHeight();
+window.onload = () => {
+    setSourceBlockHeight();
+}
 
 slider.addEventListener('mousedown', sliderListener);
 window.addEventListener('scroll', (e) => {
@@ -30,8 +31,8 @@ function sliderListener(e) {
 function changeHeight(e) {
     var y = e != undefined ? e.clientY : window.innerHeight - 50;
     if (y >= 0) {
-        slider.style.bottom = window.innerHeight - y + 'px';
-        trans.style.height = y + 'px';
+        slider.style.bottom = window.innerHeight - y - 5 + 'px';
+        trans.style.height = y - 5 + 'px';
     }
 }
 
@@ -40,7 +41,7 @@ function setSourceBlockHeight() {
     var pt = trans.getElementsByTagName('P');
 
     for (var i = 0; i < ps.length; i++) {
-        var height = pt[i].offsetHeight;
+        var height = pt[i].getBoundingClientRect().height;
         ps[i].style.height = height - 2 + 'px';
     }
 }
