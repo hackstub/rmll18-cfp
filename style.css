@@ -10,13 +10,8 @@ html, body {
     font-family: "Open Sans Regular";
 }
 
-#rmllT, #rmllS {
-    margin: 5rem 0 1rem 0;
-    width: 40rem;
-}
 
 #source {
-    font-family: 'Space Mono Regular';
     font-size: 0.8rem;
     background-color: #dffffd;
 }
@@ -50,20 +45,53 @@ html, body {
 
 h1 {
     margin: 0;
-    font-size: 5rem;
+    font-size: 8.25rem;
+    font-family:"Open Sans Semibold";
+    font-weight:normal;
+    line-height:1;
 }
 #source h1 {
-    margin-top: 0.5rem;
-    line-height: 6.6rem;
+    color:white;
+    text-stroke:2px black;
+    -webkit-text-stroke:2px black;
+}
+
+h2 {
+    margin: 0;
+    font-size: 5.25rem;
+    font-family:"Open Sans Italic";
+    font-weight:normal;
+    line-height:1.5;
+    /*letter-spacing:2px;*/
+}
+#source h2 {
+    text-stroke:1px solid black;
+    -webkit-text-stroke:1px solid black;
+}
+
+h3 {
+    margin: 0;
+    font-size: 5.5rem;
+    font-family:"Open Sans Regular";
+    font-weight:normal;
+    line-height:1.25;
+}
+
+#source h3 {
+    font-family:"Space Mono Regular";
 }
 
 .main {
     width: 90%;
-    margin: auto;
+    /*margin: auto;*/
+    margin-top:30px;
+    margin-left:45px;
 }
+
 #source .main {
     background-color: white;
 }
+
 #source .main::before {
     content: '5%';
     position: fixed;
@@ -92,21 +120,25 @@ p {
 #source p {
     box-sizing: border-box;
     position: relative;
+    font-family: 'Space Mono Regular';
     color: black;
     border: 1px solid #8400ff;
     padding: 0.2rem;
 }
+
 #source .margin {
     background-color: #ffff00;
     height: 1rem;
     max-width: 55rem;
 
 }
+
 #source .margin::before {
     font-size: 0.6rem;
     content: "margin-bottom: 1rem";
     padding-left: 0.5rem;
 }
+
 #source p::before {
     /* font-size: 0.6rem; */
     left: -2rem;
@@ -119,6 +151,7 @@ p {
     color: white;
     padding: 0 0.5rem;
 }
+
 #source p::after {
     font-size: 0.6rem;
 
