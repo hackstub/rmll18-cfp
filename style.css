@@ -7,26 +7,9 @@ html, body {
     padding: 0;
     box-sizing: border-box;
     color: black;
-    font-family: "Open Sans Regular";
+    font-family: "Open Sans";
 }
 
-/* FIXME */
-#source .main {
-    height: 10000px;
-}
-
-#source {
-    font-size: 0.8rem;
-    background-color: #dffffd;
-}
-#trad {
-    height: calc(100% - 250px);
-    width: 100%;
-    overflow: hidden;
-    background-color: white;
-    position: fixed;
-    top: 0;
-}
 #slider {
     height: 10px;
     width: 100%;
@@ -47,11 +30,30 @@ html, body {
     top: calc(-0.5rem + 2.5px);
 }
 
+/* FIXME */
+#source .main {
+    height: 10000px;
+}
+
+#source {
+    font-size: 0.8rem;
+    background-color: #dffffd;
+}
+#trad {
+    height: calc(100% - 250px);
+    width: 100%;
+    overflow: hidden;
+    background-color: white;
+    position: fixed;
+    top: 0;
+}
+
+/* TITLE ZONE */
 .t1 {
     margin: 0;
     font-size: 8.25rem;
-    font-family:"Open Sans Semibold";
-    font-weight:normal;
+    font-family:"Open Sans";
+    font-weight: 600;
     line-height:1;
 }
 #source .t1 {
@@ -59,12 +61,11 @@ html, body {
     text-stroke:2px black;
     -webkit-text-stroke:2px black;
 }
-
 .t2 {
     margin: 0;
     font-size: 5.25rem;
-    font-family:"Open Sans Italic";
-    font-weight:normal;
+    font-family:"Open Sans";
+    font-style: italic;
     line-height:1.5;
     /*letter-spacing:2px;*/
 }
@@ -73,17 +74,15 @@ html, body {
     -webkit-text-stroke:1px solid black;
 }
 
+/* CONTENT BLOCK */
 .main {
     width: 90%;
-    /*margin: auto;*/
     margin-top:30px;
     margin-left:45px;
 }
-
 #source .main {
     background-color: white;
 }
-
 #source .main::before {
     content: '5%';
     position: fixed;
@@ -99,38 +98,21 @@ html, body {
     transform: rotate(-90deg);
 }
 
+
 p {
-    /* border: 1px solid grey; */
     max-width: 55rem;
-    margin: 0;
     padding: 0;
-}
-#trad p {
     margin-bottom: 1rem;
 }
 
 #source p {
     box-sizing: border-box;
     position: relative;
-    font-family: 'Space Mono Regular';
+    font-family: 'Space Mono';
     color: black;
     border: 1px solid #8400ff;
     padding: 0.2rem;
 }
-
-#source .margin {
-    background-color: #ffff00;
-    height: 1rem;
-    max-width: 55rem;
-
-}
-
-#source .margin::before {
-    font-size: 0.6rem;
-    content: "margin-bottom: 1rem";
-    padding-left: 0.5rem;
-}
-
 #source p::before {
     /* font-size: 0.6rem; */
     left: -2rem;
@@ -143,7 +125,6 @@ p {
     color: white;
     padding: 0 0.5rem;
 }
-
 #source p::after {
     font-size: 0.6rem;
 
@@ -156,62 +137,98 @@ p {
     padding: 0 0.5rem;
 }
 
-@font-face {
- font-family: "Open Sans Light";
- src: url("fonts/OpenSans-Light-webfont.woff") format("woff");
+#source .margin {
+    background-color: #ffff00;
+    height: 1rem;
+    max-width: 55rem;
+
+}
+#source .margin::before {
+    font-size: 0.6rem;
+    content: "margin-bottom: 1rem";
+    padding-left: 0.5rem;
 }
 
 @font-face {
- font-family: "Open Sans LightItalic";
- src: url("fonts/OpenSans-LightItalic-webfont.woff") format("woff");
+    font-family: "Open Sans";
+    src: url("fonts/OpenSans-Light-webfont.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
 }
 
 @font-face {
- font-family: "Open Sans Regular";
- src: url("fonts/OpenSans-Regular-webfont.woff") format("woff");
+    font-family: "Open Sans";
+    src: url("fonts/OpenSans-LightItalic-webfont.woff") format("woff");
+    font-weight: 300;
+    font-style: italic;
 }
 
 @font-face {
- font-family: "Open Sans Italic";
- src: url("fonts/OpenSans-Italic-webfont.woff") format("woff");
+    font-family: "Open Sans";
+    src: url("fonts/OpenSans-Regular-webfont.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
 }
 
 @font-face {
- font-family: "Open Sans Semibold";
- src: url("fonts/OpenSans-Semibold-webfont.woff") format("woff");
+    font-family: "Open Sans";
+    src: url("fonts/OpenSans-Italic-webfont.woff") format("woff");
+    font-weight: 400;
+    font-style: italic;
 }
 
 @font-face {
- font-family: "Open Sans SemiboldItalic";
- src: url("fonts/OpenSans-SemiboldItalic-webfont.woff") format("woff");
+    font-family: "Open Sans";
+    src: url("fonts/OpenSans-Semibold-webfont.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
 }
 
 @font-face {
- font-family: "Open Sans Bold";
- src: url("fonts/OpenSans-Bold-webfont.woff") format("woff");
+    font-family: "Open Sans";
+    src: url("fonts/OpenSans-SemiboldItalic-webfont.woff") format("woff");
+    font-weight: 600;
+    font-style: italic;
 }
 
 @font-face {
- font-family: "Open Sans BoldItalic";
- src: url("fonts/OpenSans-BoldItalic-webfont.woff") format("woff");
+    font-family: "Open Sans";
+    src: url("fonts/OpenSans-Bold-webfont.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
 }
 
 @font-face {
- font-family: "Space Mono Regular";
- src: url("fonts/SpaceMono-Regular-webfont.woff") format("woff");
+    font-family: "Open Sans";
+    src: url("fonts/OpenSans-BoldItalic-webfont.woff") format("woff");
+    font-weight: 700;
+    font-style: italic;
 }
 
 @font-face {
- font-family: "Space Mono Italic";
- src: url("fonts/SpaceMono-Italic-webfont.woff") format("woff");
+    font-family: "Space Mono";
+    src: url("fonts/SpaceMono-Regular-webfont.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
 }
 
 @font-face {
- font-family: "Space Mono Bold";
- src: url("fonts/SpaceMono-Bold-webfont.woff") format("woff");
+    font-family: "Space Mono";
+    src: url("fonts/SpaceMono-Italic-webfont.woff") format("woff");
+    font-weight: 400;
+    font-style: italic;
 }
 
 @font-face {
- font-family: "Space Mono BoldItalic";
- src: url("fonts/SpaceMono-BoldItalic-webfont.woff") format("woff");
+    font-family: "Space Mono";
+    src: url("fonts/SpaceMono-Bold-webfont.woff") format("woff");
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Space Mono";
+    src: url("fonts/SpaceMono-BoldItalic-webfont.woff") format("woff");
+    font-weight: 700;
+    font-style: italic;
 }

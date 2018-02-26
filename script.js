@@ -6,11 +6,12 @@ var slider = document.getElementById('slider');
 window.onload = () => {
     changeHeight();
     setSourceBlockHeight();
+    // FIXME Temporarily duplicate nodes
+    duplicateNodes();
 }
 
 slider.addEventListener('mousedown', sliderListener);
 window.addEventListener('scroll', (e) => {
-    console.log(trad);
     trad.scrollTop = e.pageY != undefined ? e.pageY : document.body.scrollTop;
 });
 window.addEventListener('resize', (e) => {
@@ -47,4 +48,10 @@ function setSourceBlockHeight() {
         var height = pt[i].getBoundingClientRect().height;
         ps[i].style.height = height - 2 + 'px';
     }
+}
+
+function duplicateNodes() {
+    var main = document.getElementsByClassName('main')[0].cloneNode(true);
+    var source = document.getElementById('source');
+    source.appendChild(main);
 }
