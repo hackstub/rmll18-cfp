@@ -10,12 +10,16 @@ html, body {
     font-family: "Open Sans Regular";
 }
 
+/* FIXME */
+#source .main {
+    height: 10000px;
+}
 
 #source {
     font-size: 0.8rem;
     background-color: #dffffd;
 }
-#trans {
+#trad {
     height: calc(100% - 250px);
     width: 100%;
     overflow: hidden;
@@ -43,20 +47,20 @@ html, body {
     top: calc(-0.5rem + 2.5px);
 }
 
-h1 {
+.t1 {
     margin: 0;
     font-size: 8.25rem;
     font-family:"Open Sans Semibold";
     font-weight:normal;
     line-height:1;
 }
-#source h1 {
+#source .t1 {
     color:white;
     text-stroke:2px black;
     -webkit-text-stroke:2px black;
 }
 
-h2 {
+.t2 {
     margin: 0;
     font-size: 5.25rem;
     font-family:"Open Sans Italic";
@@ -64,21 +68,9 @@ h2 {
     line-height:1.5;
     /*letter-spacing:2px;*/
 }
-#source h2 {
+#source .t2 {
     text-stroke:1px solid black;
     -webkit-text-stroke:1px solid black;
-}
-
-h3 {
-    margin: 0;
-    font-size: 5.5rem;
-    font-family:"Open Sans Regular";
-    font-weight:normal;
-    line-height:1.25;
-}
-
-#source h3 {
-    font-family:"Space Mono Regular";
 }
 
 .main {
@@ -113,7 +105,7 @@ p {
     margin: 0;
     padding: 0;
 }
-#trans p {
+#trad p {
     margin-bottom: 1rem;
 }
 
