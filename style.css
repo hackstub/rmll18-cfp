@@ -1,18 +1,31 @@
 :root {
+    font-family: "Open Sans";
     font-size: 1em;
 }
 
-html, body {
-    margin: 0;
-    padding: 0;
+html, body, main, div, span, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, img, s, strong, b, u, i, center, ol, ul, li,
+article, aside, footer, header, nav, section {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 1rem;
+	/* font: inherit; */
     box-sizing: border-box;
-    color: black;
-    font-family: "Open Sans";
+}
+body {
+	line-height: 1;
+}
+ul {
+	list-style: none;
+}
+li::before {
+    content: "— ";
 }
 
 #slider {
     height: 10px;
-    width: 100%;
+    width: 80vw;
     background-color: black;
     position: fixed;
     bottom: 250px;
@@ -26,13 +39,36 @@ html, body {
     width: 2rem;
     background-color: black;
     transform: rotate(90deg);
-    left: calc(50vw - 1rem);
+    left: calc(40vw - 1rem);
     top: calc(-0.5rem + 2.5px);
 }
 
 /* FIXME */
-#source .main {
-    height: 10000px;
+main {
+    margin-bottom: 10rem;
+}
+
+/* MENU */
+nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 20vw;
+
+    background-color: black;
+    color: white;
+    padding: 1rem;
+}
+nav div p {
+    font-size: 3rem;
+}
+nav ul li:not(:first-child) {
+    padding-left: 1rem;
+    margin-top: 0.4rem;
+}
+nav > p {
+    margin: 3rem 0;
 }
 
 #source {
@@ -41,11 +77,15 @@ html, body {
 }
 #trad {
     height: calc(100% - 250px);
-    width: 100%;
     overflow: hidden;
     background-color: white;
     position: fixed;
     top: 0;
+}
+
+main, section {
+    width: calc(80vw - 2rem);
+    box-sizing: border-box;
 }
 
 /* TITLE ZONE */
@@ -58,8 +98,11 @@ html, body {
 }
 #source .t1 {
     color:white;
-    text-stroke:2px black;
-    -webkit-text-stroke:2px black;
+    font-family: "Space Mono";
+    /* text-stroke:2px black;
+    -webkit-text-stroke:2px black; */
+    background-color: #8400ff;
+
 }
 .t2 {
     margin: 0;
@@ -100,7 +143,7 @@ html, body {
 
 
 p {
-    max-width: 55rem;
+    max-width: 65rem;
     padding: 0;
     margin-bottom: 1rem;
 }
