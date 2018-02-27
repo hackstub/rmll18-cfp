@@ -21,14 +21,16 @@ ul {
 li::before {
     content: "— ";
 }
+strong {
+    font-weight: bold;
+}
 
 #slider {
     height: 10px;
     width: 80%;
     background-color: black;
     position: fixed;
-    bottom: 250px;
-    cursor: move;
+    cursor: row-resize;
 }
 #slider::before {
     content: '< >';
@@ -44,7 +46,7 @@ li::before {
 
 /* FIXME */
 main {
-    margin-bottom: 55rem;
+    margin-bottom: 155rem;
 }
 
 
@@ -57,21 +59,65 @@ nav {
     width: 20%;
     background-color: black;
     color: white;
-    padding: 1rem;
 }
-nav div p {
-    font-size: 3rem;
-}
-nav ul li:not(:first-child) {
-    padding-left: 1rem;
-    margin-top: 0.4rem;
-}
-nav > p {
-    margin: 3rem 0;
+nav div {
+    padding: 1.5rem;
 }
 
+#date {
+    font-family: "Space Mono";
+    font-size: 2.3rem;
+    color: black;
+    background-color: #8400ff;
+}
+#date span {
+    display: inline-block;
+    border-bottom: 4px solid black;
+}
+
+#menu p:nth-of-type(2) {
+    margin: 3rem 0;
+}
+#menu p:last-child {
+    position: fixed;
+    right: 1.5rem;
+    bottom: 1.5rem;
+}
+#menu p > a {
+    font-style: italic;
+    display: inline-block;
+    background-color: white;
+    color: black;
+    width: 2rem;
+    text-align: center;
+    text-decoration: none;
+}
+
+#menu > ul {
+    margin-top: 3rem;
+}
+#menu > ul > li {
+    margin-top: 1rem;
+}
+#menu > ul > li:before {
+    content: "> ";
+}
+li ul {
+    padding-left: 1rem;
+}
+
+nav a:link, nav a:visited {
+    color: white;
+}
+nav a:hover, nav a:active {
+    color: #8400ff;
+    outline: none;
+}
+
+/* BASE SECTIONS */
 #source {
-    font-size: 0.8rem;
+    font-family: "Space Mono";
+    font-size: 0.6rem;
     background-color: #dffffd;
 }
 #trad {
@@ -139,6 +185,7 @@ section {
 .main {
     width: 75%;
     margin-left:10%;
+    margin-top: 8rem;
 }
 #source .main {
     background-color: white;
@@ -146,14 +193,14 @@ section {
 #source .main::before {
     content: '5%';
     position: fixed;
-    left: calc(2.5% - 0.5rem);
+    left: calc(2% - 0.5rem);
     top: 50%;
     transform: rotate(90deg);
 }
 #source .main::after {
     content: '5%';
     position: fixed;
-    right: calc(2.5% - 0.5rem);
+    right: calc(22% - 0.5rem);
     top: 50%;
     transform: rotate(-90deg);
 }
@@ -193,6 +240,16 @@ h3.marginBotStop, h4.marginBotStop{
 h5 {
     margin-top:2rem;
     font-weight:600;
+}
+
+
+.anchors:before {
+    /* Add a fake height to anchors so the scrollTo let a top margin */
+    content: " ";
+    display: block;
+    visibility: none;
+    margin-top: -2rem;
+    height: 2rem;
 }
 
 
@@ -245,7 +302,6 @@ main p {
     content: "margin-bottom: 1rem";
     padding-left: 0.5rem;
 }
-
 
 /* FONTS */
 @font-face {
