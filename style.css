@@ -3,9 +3,10 @@
     font-size: 1.2em;
 }
 
-html, body, main, div, span, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, img, s, strong, b, u, i, center, ol, ul, li,
-article, aside, footer, header, nav, section {
+/* FIXME clean unuse elements */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike,
+strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption,
+footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -45,12 +46,6 @@ strong {
     top: calc(-0.5rem + 2.5px);
 }
 
-/* FIXME */
-main {
-    margin-bottom: 155rem;
-}
-
-
 /* MENU */
 nav {
     position: fixed;
@@ -67,7 +62,7 @@ nav div {
 
 #date {
     font-family: "Space Mono";
-    font-size: 2.3rem;
+    font-size: 2.5vw;
     color: black;
     background-color: #8400ff;
 }
@@ -76,15 +71,12 @@ nav div {
     border-bottom: 4px solid black;
 }
 
-#menu p:nth-of-type(2) {
-    margin: 3rem 0;
-}
-#menu p:last-child {
+#menu p {
     position: fixed;
     right: 1.5rem;
     bottom: 1.5rem;
 }
-#menu p > a {
+#menu p a {
     font-style: italic;
     display: inline-block;
     background-color: white;
@@ -115,10 +107,11 @@ nav a:hover, nav a:active {
     outline: none;
 }
 
+
 /* BASE SECTIONS */
 #source {
     font-family: "Space Mono";
-    font-size: 0.6rem;
+    font-size: 0.65rem;
     background-color: #dffffd;
 }
 #trad {
@@ -128,6 +121,7 @@ nav a:hover, nav a:active {
     background-color: white;
     position: fixed;
     top: 0;
+    /* opacity: 0.8; */
 }
 
 main {
@@ -135,12 +129,30 @@ main {
 }
 section {
     width: 100%;
+    padding-bottom: 5rem;
+}
+#source section {
+    position: relative;
+}
+#source section:after {
+    content: "section";
+    font-weight: bold;
+    position: absolute;
+    background-color: white;
+    width: 3.5rem;
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    right: -3.5rem;
+    top: 0;
 }
 
 
 /* TITLE ZONE */
 .title {
     margin-left:3%;
+    height: 100vh;
+    /* background-color: red; */
 }
 
 .t1 {
@@ -149,7 +161,7 @@ section {
     font-size: 14vh;
     font-family:"Open Sans";
     font-weight: 600;
-    line-height:1.15;
+    line-height:16vh;
     /*height:14vh;*/
     /* pc > tablette ()~1024x768) */
     /*width:100vw;*/
@@ -159,6 +171,7 @@ section {
     color:white;
     font-family: "Space Mono";
     font-weight:400;
+    line-height:17vh;
     /* text-stroke:2px black;
     -webkit-text-stroke:2px black; */
     background-color: #8400ff;
@@ -170,8 +183,7 @@ section {
     font-size: 10vh;
     font-family:"Open Sans";
     font-style: italic;
-    font-weight:400;
-    line-height:1.15;
+    line-height:12vh;
     /*height:14vh;*/
     /* pc > tablette ()~1024x768) */
     /*width:100vw;*//
@@ -179,6 +191,10 @@ section {
     /*letter-spacing:2px;*/
 }
 #source .t2 {
+    font-family: "Space Mono";
+    font-size: 8vh;
+    line-height:12vh;
+    background-color: #b6ffaa;
 }
 
 
@@ -191,28 +207,30 @@ section {
 #source .main {
     background-color: white;
 }
-#source .main::before {
-    content: '5%';
-    position: fixed;
-    left: calc(2% - 0.5rem);
-    top: 50%;
-    transform: rotate(90deg);
-}
-#source .main::after {
-    content: '5%';
-    position: fixed;
-    right: calc(22% - 0.5rem);
-    top: 50%;
-    transform: rotate(-90deg);
-}
 
 
 /* CONTENT TITLES */
 h2 {
+    position: relative;
     margin-top:8rem;
     margin-bottom:4rem;
     font-size:4rem;
     font-weight:600;
+}
+#source h2 {
+    background-color: #ffda00;
+}
+#source h2:before {
+    font-size: 0.6rem;
+    content: "h2";
+    font-weight: bold;
+    position: absolute;
+    background-color: #ffda00;
+    width: 2.5rem;
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    left: -2.5rem;
 }
 
 .main h3:first-of-type {
@@ -225,11 +243,44 @@ h3 {
     font-size:2.25rem;
     font-weight:600;
 }
+#source h3 {
+    position: relative;
+    background-color: #ffda00;
+    font-size: 2rem;
+}
+#source h3:before {
+    font-size: 0.6rem;
+    content: "h3";
+    font-weight: bold;
+    position: absolute;
+    background-color: #ffda00;
+    width: 2.5rem;
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    left: -2.5rem;
+}
 
 h4 {
     margin-bottom:1rem;
     font-size:1.5rem;
     font-weight:600;
+}
+#source h4 {
+    position: relative;
+    background-color: #ffff00;
+}
+#source h4:before {
+    font-size: 0.6rem;
+    content: "h4";
+    font-weight: bold;
+    position: absolute;
+    background-color: #ffff00;
+    width: 2.5rem;
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    left: -2.5rem;
 }
 h4:not(:nth-of-type(5)) {
     margin-top:3rem;
@@ -245,15 +296,22 @@ h5 {
 article h5:first-child {
     margin-top:0;
 }
-
-
-.anchors:before {
-    /* Add a fake height to anchors so the scrollTo let a top margin */
-    content: " ";
-    display: block;
-    visibility: none;
-    margin-top: -2rem;
-    height: 2rem;
+#source h5 {
+    font-size: 1rem;
+    position: relative;
+    background-color: #ffff00;
+}
+#source h5:before {
+    font-size: 0.6rem;
+    content: "h5";
+    font-weight: bold;
+    position: absolute;
+    background-color: #ffff00;
+    width: 2.5rem;
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    left: -2.5rem;
 }
 
 
@@ -264,28 +322,29 @@ main p {
 }
 
 #source p {
-    box-sizing: border-box;
     position: relative;
     font-family: 'Space Mono';
-    color: black;
+    /* border: 1px solid #6dffff; */
+    /* background-color: #dadaff; */
     border: 1px solid #8400ff;
-    padding: 0.2rem;
+    padding: 0.3rem;
 }
-#source p::before {
-    /* font-size: 0.6rem; */
-    left: -2rem;
-    width: 1rem;
-    height: calc(1.2rem + 1px);
+#source p:before {
+    font-size: 0.6rem;
+    content: "p";
+    font-weight: bold;
     position: absolute;
-    top: -1px;
-    content: 'p';
     background-color: #8400ff;
     color: white;
-    padding: 0 0.5rem;
+    width: 2.5rem;
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    left: -2.5rem;
+    top: -1px;
 }
 #source p::after {
     font-size: 0.6rem;
-
     content: 'class="normal"';
     position: absolute;
     bottom: 0;
@@ -317,13 +376,13 @@ article {
     width:47%;
 }
 
-.main ul{
+.main ul {
     margin-bottom:1rem;
 }
 acronym {
     text-decoration: none;
 }
-i{
+i {
     font-style: italic;
 }
 mark{
