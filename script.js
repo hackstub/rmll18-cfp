@@ -1,13 +1,13 @@
 // 'use strict';
 
 var trad = document.getElementById('trad');
-console.log(trad);
 var slider = document.getElementById('slider');
 window.onload = () => {
-    changeHeight();
-    setSourceBlockHeight();
     // FIXME Temporarily duplicate nodes
     duplicateNodes();
+
+    changeHeight();
+    setSourceBlockHeight();
 }
 
 slider.addEventListener('mousedown', sliderListener);
@@ -41,13 +41,24 @@ function changeHeight(e) {
 }
 
 function setSourceBlockHeight() {
-    var ps = document.getElementById('source').getElementsByTagName('P');
-    var pt = trad.getElementsByTagName('P');
-
-    for (var i = 0; i < ps.length; i++) {
-        var height = pt[i].getBoundingClientRect().height;
-        ps[i].style.height = height - 2 + 'px';
+    function uniformHeigth(base, adapt) {
+        // Adapt each given elements height to its base clone
+        for (let i = 0, b, a; b = base[i], a = adapt[i]; i++) {
+            let height = b.getBoundingClientRect().height;
+            a.style.height = height + 'px';
+        }
     }
+
+    const titles = document.getElementsByClassName('title');
+    uniformHeigth(titles[1].children, titles[0].children)
+
+    const source = document.getElementById('source')
+    const tags = ['P', 'H2', 'H3', 'H4', 'H5', 'UL']
+    tags.forEach(tag => {
+        let tradTags = trad.getElementsByTagName(tag);
+        let sourceTags = source.getElementsByTagName(tag);
+        uniformHeigth(tradTags, sourceTags)
+    });
 }
 
 function duplicateNodes() {
