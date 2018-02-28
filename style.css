@@ -36,14 +36,20 @@ strong {
 }
 #slider::before {
     content: '< >';
-    text-align: center;
-    color: white;
     position: absolute;
-    width: 2rem;
+    text-align: center;
+    font-family: "Space Mono";
+    font-size: 0.8rem;
+    line-height: 1rem;
+    height: 1rem;
+    color: white;
     background-color: black;
+    width: 2rem;
     transform: rotate(90deg);
-    left: calc(40vw - 1rem);
-    top: calc(-0.5rem + 2.5px);
+    -ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Safari */
+    left: calc(50% - 1rem);
+    top: -5px;
 }
 
 /* MENU */
@@ -112,16 +118,16 @@ nav a:hover, nav a:active {
 #source {
     font-family: "Space Mono";
     font-size: 0.65rem;
-    background-color: #dffffd;
+    /* background-color: #dffffd; */
+    /* background-color: #ffffaa; */
+    background-color: #ffdaff;
+    display: none;
 }
 #trad {
     width: 80%;
-    height: calc(100% - 250px);
-    overflow: hidden;
+    height: 100%;
     background-color: white;
-    position: fixed;
-    top: 0;
-    /* opacity: 0.8; */
+    /* opacity: 0.5; */
 }
 
 main {
@@ -129,13 +135,13 @@ main {
 }
 section {
     width: 100%;
-    padding-bottom: 5rem;
 }
 #source section {
     position: relative;
 }
 #source section:after {
     content: "section";
+    font-size: 0.6rem;
     font-weight: bold;
     position: absolute;
     background-color: white;
@@ -158,7 +164,7 @@ section {
 .t1 {
     margin: 0;
     /*font-size: 8.25rem;*/
-    font-size: 14vh;
+    font-size: 14vmin;
     font-family:"Open Sans";
     font-weight: 600;
     line-height:16vh;
@@ -180,13 +186,13 @@ section {
 .t2 {
     margin: 0;
     /*font-size: 5.25rem;*/
-    font-size: 10vh;
+    font-size: 10vmin;
     font-family:"Open Sans";
     font-style: italic;
     line-height:12vh;
     /*height:14vh;*/
     /* pc > tablette ()~1024x768) */
-    /*width:100vw;*//
+    /*width:100vw;*/
     /*width:135vh;*/
     /*letter-spacing:2px;*/
 }
@@ -221,7 +227,7 @@ h2 {
     background-color: #ffda00;
 }
 #source h2:before {
-    font-size: 0.6rem;
+    font-size: 0.65rem;
     content: "h2";
     font-weight: bold;
     position: absolute;
@@ -242,6 +248,7 @@ h3 {
     margin-bottom:2rem;
     font-size:2.25rem;
     font-weight:600;
+    background-color: red;
 }
 #source h3 {
     position: relative;
@@ -268,14 +275,14 @@ h4 {
 }
 #source h4 {
     position: relative;
-    background-color: #ffff00;
+    background-color: #b6ffaa;
 }
 #source h4:before {
     font-size: 0.6rem;
     content: "h4";
     font-weight: bold;
     position: absolute;
-    background-color: #ffff00;
+    background-color: #b6ffaa;
     width: 2.5rem;
     height: 1rem;
     line-height: 1rem;
@@ -299,14 +306,14 @@ article h5:first-child {
 #source h5 {
     font-size: 1rem;
     position: relative;
-    background-color: #ffff00;
+    background-color: #b6ffaa;
 }
 #source h5:before {
     font-size: 0.6rem;
     content: "h5";
     font-weight: bold;
     position: absolute;
-    background-color: #ffff00;
+    background-color: #b6ffaa;
     width: 2.5rem;
     height: 1rem;
     line-height: 1rem;
@@ -327,7 +334,7 @@ main p {
     /* border: 1px solid #6dffff; */
     /* background-color: #dadaff; */
     border: 1px solid #8400ff;
-    padding: 0.3rem;
+    /* padding: 0.3rem; */
 }
 #source p:before {
     font-size: 0.6rem;

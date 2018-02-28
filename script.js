@@ -1,23 +1,34 @@
 // 'use strict';
 
 var trad = document.getElementById('trad');
+var source = document.getElementById('source')
 var slider = document.getElementById('slider');
-window.onload = () => {
+window.onload = init;
+
+slider.addEventListener('mousedown', sliderListener);
+window.addEventListener('scroll', function (e) {
+    trad.scrollTop = e.pageY != undefined ? e.pageY : document.body.scrollTop;
+});
+window.addEventListener('resize', function (e) {
+    changeHeight();
+    setSourceBlockHeight();
+});
+
+function init() {
     // FIXME Temporarily duplicate nodes
     duplicateNodes();
+
+    // setup the needed css to display the source here in case of disabled js
+    // or for very old browsers
+    trad.style.overflow = 'hidden';
+    trad.style.position = 'fixed';
+    trad.style.top = 0;
+    source.style.display = 'block';
+
 
     changeHeight();
     setSourceBlockHeight();
 }
-
-slider.addEventListener('mousedown', sliderListener);
-window.addEventListener('scroll', (e) => {
-    trad.scrollTop = e.pageY != undefined ? e.pageY : document.body.scrollTop;
-});
-window.addEventListener('resize', (e) => {
-    changeHeight();
-    setSourceBlockHeight();
-});
 
 function sliderListener(e) {
     function removeListeners(event) {
@@ -33,30 +44,38 @@ function sliderListener(e) {
 }
 
 function changeHeight(e) {
-    var y = e != undefined ? e.clientY : window.innerHeight / 2;
-    if (y >= 0) {
-        slider.style.bottom = window.innerHeight - y - 5 + 'px';
-        trad.style.height = y - 5 + 'px';
+    var windowHeight = window.innerHeight;
+    var y = e != undefined ? e.clientY : windowHeight / 1.8;
+    if (y >= windowHeight) {
+        slider.style.bottom = '-5px';
+        trad.style.height = '100%';
+    }
+    else if (y > 0) {
+        slider.style.bottom = windowHeight - y - 5 + 'px';
+        trad.style.height = y + 'px';
+    }
+    else {
+        slider.style.bottom = windowHeight - 5 + 'px';
+        trad.style.height = 0;
     }
 }
 
 function setSourceBlockHeight() {
     function uniformHeigth(base, adapt) {
         // Adapt each given elements height to its base clone
-        for (let i = 0, b, a; b = base[i], a = adapt[i]; i++) {
-            let height = b.getBoundingClientRect().height;
+        for (var i = 0, b, a; b = base[i], a = adapt[i]; i++) {
+            var height = b.getBoundingClientRect().height;
             a.style.height = height + 'px';
         }
     }
 
-    const titles = document.getElementsByClassName('title');
+    var titles = document.getElementsByClassName('title');
     uniformHeigth(titles[1].children, titles[0].children)
 
-    const source = document.getElementById('source')
-    const tags = ['P', 'H2', 'H3', 'H4', 'H5', 'UL']
-    tags.forEach(tag => {
-        let tradTags = trad.getElementsByTagName(tag);
-        let sourceTags = source.getElementsByTagName(tag);
+    var tags = ['P', 'H2', 'H3', 'H4', 'H5', 'UL']
+    tags.forEach(function (tag) {
+        var tradTags = trad.getElementsByTagName(tag);
+        var sourceTags = source.getElementsByTagName(tag);
         uniformHeigth(tradTags, sourceTags)
     });
 }
