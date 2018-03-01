@@ -133,7 +133,7 @@ function setSourceBlockHeight() {
     }
 
     var titles = document.getElementsByTagName('HEADER');
-    uniformHeigth(titles[1].children, titles[0].children, true)
+    uniformHeigth(titles[1].children, titles[0].children, portrait)
 
     var tags = ['P', 'H2', 'H3', 'H4', 'H5', 'UL']
     tags.forEach(function (tag) {
