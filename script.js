@@ -14,6 +14,10 @@ window.addEventListener('resize', function (e) {
     setSourceBlockHeight();
 });
 
+document.getElementById('button').onclick = function () {
+    document.getElementById('menu').style.display = "block";
+}
+
 function init() {
     // FIXME Temporarily duplicate nodes
     duplicateNodes();
@@ -61,16 +65,21 @@ function changeHeight(e) {
 }
 
 function setSourceBlockHeight() {
-    function uniformHeigth(base, adapt) {
+    function uniformHeigth(base, adapt, orientation) {
         // Adapt each given elements height to its base clone
         for (var i = 0, b, a; b = base[i], a = adapt[i]; i++) {
-            var height = b.getBoundingClientRect().height;
-            a.style.height = height + 'px';
+            if (orientation <= 1 || orientation == undefined) {
+                a.style.height = b.getBoundingClientRect().height + 'px';
+            }
+            else {
+                a.style.height = b.getBoundingClientRect().width + 'px';;
+            }
         }
     }
 
-    var titles = document.getElementsByClassName('title');
-    uniformHeigth(titles[1].children, titles[0].children)
+    var titles = document.getElementsByTagName('HEADER');
+    var orientation = window.innerHeight / window.innerWidth;
+    uniformHeigth(titles[1].children, titles[0].children, orientation)
 
     var tags = ['P', 'H2', 'H3', 'H4', 'H5', 'UL']
     tags.forEach(function (tag) {
