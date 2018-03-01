@@ -3,6 +3,10 @@
     font-size: 1.2em;
 }
 
+
+/* ┌─╮┌─╴╭─╴┌─╴╶┬╴
+   ├┬╯├─╴╰─╮├─╴ │
+   ╵ ╰╰─╴╶─╯╰─╴ ╵  */
 /* FIXME clean unuse elements */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike,
 strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption,
@@ -27,6 +31,10 @@ strong {
     font-weight: bold;
 }
 
+
+/* ┌─╮╭─┐╭─╴┌─╴
+   │╶┤├─┤╰─╮├─╴
+   └─╯╵ ╵╶─╯╰─╴ */
 #slider {
     height: 10px;
     background-color: black;
@@ -51,9 +59,10 @@ strong {
     top: -5px;
 }
 
-/* ┌─╮╭─┐╭─╴┌─╴
-   │╶┤├─┤╰─╮├─╴
-   └─╯╵ ╵╶─╯╰─╴ */
+main {
+    width: 80%;
+}
+
 #source {
     font-family: "Space Mono";
     font-size: 0.65rem;
@@ -69,23 +78,22 @@ strong {
     /* opacity: 0.5; */
 }
 
-main {
-    width: 80%;
-}
 section {
-    width: 100%;
+    width: 75%;
+    margin-left:10%;
+    margin-top: 8rem;
 }
 #source section {
+    background-color: white;
     position: relative;
 }
-#source section:after {
-    content: "section";
-    font-size: 0.6rem;
-    font-weight: bold;
+#source section::after {
     position: absolute;
+    font-size: 0.6rem;
+    content: "section";
+    font-weight: bold;
     background-color: white;
     width: 3.5rem;
-    height: 1rem;
     line-height: 1rem;
     text-align: center;
     right: -3.5rem;
@@ -103,6 +111,7 @@ section {
         width: 100%;
     }
 }
+
 
 /* ╭╮╮┌─╴╭╮╷╷ ╷
    │││├─╴││││ │
@@ -142,7 +151,7 @@ nav > p a {
 #menu > ul > li:not(:first-child) {
     margin-top: 1rem;
 }
-#menu > ul > li:before {
+#menu > ul > li::before {
     content: "> ";
 }
 li ul {
@@ -211,6 +220,7 @@ nav a:hover, nav a:active {
     }
 }
 
+
 /* ╭╮╮╭─┐╶┬╴╭╮╷   ╶┬╴╶┬╴╶┬╴╷  ┌─╴
    │││├─┤ │ │││╶─╴ │  │  │ │  ├─╴
    ╵╵╵╵ ╵╶┴╴╵╰╯    ╵ ╶┴╴ ╵ ╰─╴╰─╴ */
@@ -223,6 +233,7 @@ header div {
 #source .t1 {
     font-weight:400;
     background-color: #8400ff;
+    color: white;
 }
 
 .t2 {
@@ -258,7 +269,7 @@ header div {
 }
 
 @media (orientation: portrait) {
-    header {
+    /* header {
         margin-left: 0;
         height: 100vw;
         width: 80vh;
@@ -272,8 +283,8 @@ header div {
         transform-origin: top left;
 
         margin-bottom: 50rem;
-    }
-    /* header {
+    } */
+    header {
         margin-left: 0;
         height: 100vw;
         width: 85vh;
@@ -287,7 +298,7 @@ header div {
         transform-origin: top right;
 
         margin-bottom: 50rem;
-    } */
+    }
     .t1 {
         font-size: 8vh;
         line-height:16vw;
@@ -302,18 +313,10 @@ header div {
     }
 }
 
-/* CONTENT BLOCK */
-.main {
-    width: 75%;
-    margin-left:10%;
-    margin-top: 8rem;
-}
-#source .main {
-    background-color: white;
-}
 
-
-/* CONTENT TITLES */
+/* ╷ ╷   ╶┬╴╶┬╴╶┬╴╷  ┌─╴╭─╴
+   ├─┤╶─╴ │  │  │ │  ├─╴╰─╮
+   ╵ ╵    ╵ ╶┴╴ ╵ ╰─╴╰─╴╶─╯ */
 h2 {
     position: relative;
     margin-top:8rem;
@@ -337,25 +340,17 @@ h2#date_limite {
     color:#ffda00;
     font-size:3.25rem;
 }
-#source h2:before {
-    font-size: 0.65rem;
+#source h2::before {
     content: "h2";
-    font-weight: bold;
-    position: absolute;
     background-color: #ffda00;
-    width: 2.5rem;
-    height: 1rem;
-    line-height: 1rem;
-    text-align: center;
-    left: -2.5rem;
 }
 
-#source h2#date_limite:before {
+#source h2#date_limite::before {
     content:inherit;
 }
 
 
-.main h3:first-of-type {
+section h3:first-of-type {
     margin-top:8rem;
 }
 
@@ -371,17 +366,9 @@ h3 {
     background-color: #ffda00;
     font-size: 2rem;
 }
-#source h3:before {
-    font-size: 0.6rem;
+#source h3::before {
     content: "h3";
-    font-weight: bold;
-    position: absolute;
     background-color: #ffda00;
-    width: 2.5rem;
-    height: 1rem;
-    line-height: 1rem;
-    text-align: center;
-    left: -2.5rem;
 }
 
 h4 {
@@ -389,35 +376,21 @@ h4 {
     font-size:1.5rem;
     font-weight:600;
 }
-h4:before {
+h4::before {
     content: "• ";
 }
 #source h4 {
     position: relative;
     background-color: #b6ffaa;
 }
-#source h4:before {
-    font-size: 0.6rem;
+#source h4::before {
     content: "h4";
-    font-weight: bold;
-    position: absolute;
     background-color: #b6ffaa;
-    width: 2.5rem;
-    height: 1rem;
-    line-height: 1rem;
-    text-align: center;
-    left: -2.5rem;
 }
 #source h4::after {
-    font-size: 0.6rem;
-    content: "before:content: \"•\"";
-    font-weight: normal;
-    position: absolute;
-    bottom: 0;
-    right: 0;
+    content: "before::content: \"•\"";
     background-color: #ffffaa;
     color: black;
-    padding: 0 0.5rem;
 }
 h4:not(:nth-of-type(5)) {
     margin-top:3rem;
@@ -438,21 +411,15 @@ article h5:first-child {
     position: relative;
     background-color: #b6ffaa;
 }
-#source h5:before {
-    font-size: 0.6rem;
+#source h5::before {
     content: "h5";
-    font-weight: bold;
-    position: absolute;
     background-color: #b6ffaa;
-    width: 2.5rem;
-    height: 1rem;
-    line-height: 1rem;
-    text-align: center;
-    left: -2.5rem;
 }
 
 
-/* PARAGRAPHS */
+/* ┌─╮╭─┐┌─╮╭─┐╭─╮┌─╮╭─┐┌─╮╷ ╷╭─╴
+   ├─╯├─┤├┬╯├─┤│╶╮├┬╯├─┤├─╯├─┤╰─╮
+   ╵  ╵ ╵╵ ╰╵ ╵╰─╯╵ ╰╵ ╵╵  ╵ ╵╶─╯ */
 main p {
     padding: 0;
     margin-bottom: 1rem;
@@ -467,29 +434,16 @@ main p {
     border: 1px solid #8400ff;
     /* padding: 0.3rem; */
 }
-#source p:before {
-    font-size: 0.6rem;
+#source p::before {
     content: "p";
-    font-weight: bold;
-    position: absolute;
     background-color: #8400ff;
     color: white;
-    width: 2.5rem;
-    height: 1rem;
-    line-height: 1rem;
-    text-align: center;
-    left: -2.5rem;
     top: -1px;
 }
 #source p::after {
-    font-size: 0.6rem;
     content: 'class="normal"';
-    position: absolute;
-    bottom: 0;
-    right: 0;
     background-color: black;
     color: white;
-    padding: 0 0.5rem;
 }
 #source a {
     color:inherit;
@@ -497,11 +451,8 @@ main p {
     pointer-events: none;
     /* cursor:text; */
 }
-#source a:before {
-    font-size: 0.6rem;
+#source a::before {
     content: "a";
-    font-weight: bold;
-    position: relative;
     /* background-color: #6dffff; */
     /* color: black; */
     /* background-color: #3366BB; */
@@ -510,26 +461,6 @@ main p {
     /* color: white; */
     background-color:#ff0000;
     color:white;
-    width: 2.5rem;
-    height: 1rem;
-    line-height: 1rem;
-    text-align: center;
-    left:0;
-    top:0;
-    padding:0 0.5rem;
-}
-
-
-#source .margin {
-    background-color: #ffff00;
-    height: 1rem;
-    max-width: 55rem;
-
-}
-#source .margin::before {
-    font-size: 0.6rem;
-    content: "margin-bottom: 1rem";
-    padding-left: 0.5rem;
 }
 
 #articles {
@@ -544,91 +475,58 @@ article {
 article p {
     text-align: left;
 }
-article u{
+article u {
     text-decoration: underline;
     text-decoration-style: dashed;
     /* text-decoration-style: dotted; */
 }
-#source u:before {
-font-size: 0.6rem;
-content: "u";
-font-weight: bold;
-position: relative;
-text-decoration:none;
-/* background-color: #6dffff; */
-/* color: black; */
-/* background-color: #3366BB; */
-/* color: white; */
-/* background-color: #3366BB; */
-/* color: white; */
-background-color:#ff0000;
-color:white;
-width: 2.5rem;
-height: 1rem;
-line-height: 1rem;
-text-align: center;
-left:0;
-top:0;
-padding:0 0.5rem;
+#source u::before {
+    content: "u";
+    text-decoration:none;
+    /* background-color: #6dffff; */
+    /* color: black; */
+    /* background-color: #3366BB; */
+    /* color: white; */
+    /* background-color: #3366BB; */
+    /* color: white; */
+    background-color:#ff0000;
+    color:white;
 }
-.main ul {
+
+section ul {
     margin-bottom:1rem;
 }
 #source ul {
     position:relative;
     border: 1px solid #ff0000;
 }
-#source ul:before {
-    font-size: 0.6rem;
+#source ul::before {
     content: "ul";
-    font-weight: bold;
-    position: absolute;
     background-color: #ff0000;
     color: white;
-    width: 2.5rem;
-    height: 1rem;
-    line-height: 1rem;
-    text-align: center;
-    left: -2.5rem;
     top: -1px;
 }
-#source li:before {
-font-size: 0.6rem;
-content: "li";
-font-weight: bold;
-position: relative;
-background-color:#ff0000;
-color:white;
-width: 2.5rem;
-height: 1rem;
-line-height: 1rem;
-text-align: center;
-left:0;
-top:0;
-padding:0 0.5rem;
+
+#source li::before {
+    content: "li";
+    background-color:#ff0000;
+    color:white;
 }
+
 acronym {
     text-decoration: none;
 }
+
 i {
     font-style: italic;
 }
-#source i:before {
-    font-size: 0.6rem;
+#source i::before {
     content: "i";
-    font-weight: bold;
     font-style: normal;
-    position: relative;
     background-color:#ff0000;
     color:white;
-    width: 2.5rem;
-    height: 1rem;
-    line-height: 1rem;
-    text-align: center;
-    left:0;
-    top:0;
-    padding:0 0.5rem;
 }
+
 mark{
     background-color: black;
     color:white;
@@ -637,36 +535,17 @@ mark{
     background-color: inherit;
     color:inherit;
 }
-#source mark:before {
+#source mark::before {
     font-size:1.5rem;
     content: "m";
-    font-weight: bold;
     font-style: normal;
-    position: relative;
     background-color:#ff0000;
     color:white;
-    width: 2.5rem;
-    height: 1rem;
-    line-height: 1rem;
-    text-align: center;
-    left:0;
-    top:0;
-    padding:0 0.5rem;
 }
-#source q:before {
-    font-size: 0.6rem;
+#source q::before {
     content: "q";
-    font-weight: bold;
-    position: relative;
     background-color:#ff0000;
     color:white;
-    width: 2.5rem;
-    height: 1rem;
-    line-height: 1rem;
-    text-align: center;
-    left:0;
-    top:0;
-    padding:0 0.5rem;
 }
 sup{
     /* line-height:1; */
@@ -675,7 +554,42 @@ sup{
 }
 
 
-/* FONTS */
+/* ╭─╴╭─╮╷ ╷┌─╮╭─╴┌─╴   ┌─╮╭─╴┌─╴╷ ╷┌─╮╭─╮   ┌─╴╷  ┌─╴╭╮╮╭─╴
+   ╰─╮│ ││ │├┬╯│  ├─╴   ├─╯╰─╮├─╴│ ││ ││ │╶─╴├─╴│  ├─╴│││╰─╮
+   ╶─╯╰─╯╰─╯╵ ╰╰─╴╰─╴   ╵  ╶─╯╰─╴╰─╯└─╯╰─╯   ╰─╴╰─╴╰─╴╵╵╵╶─╯ */
+#source section *::before {
+    font-weight: bold;
+    text-align: center;
+    line-height: 1rem;
+    font-size: 0.6rem;
+}
+#source section > *::before,
+#source section div > *::before {
+    position: absolute;
+    width: 2.5rem;
+    left: -2.5rem;
+}
+
+#source p > *::before {
+    padding:0 0.5rem;
+}
+
+#source section > *::after {
+    position: absolute;
+    font-size: 0.6rem;
+    font-weight: normal;
+    bottom: 0;
+    right: 0;
+    padding: 0 0.5rem;
+    /* height: 1rem; */
+    line-height: 1rem;
+
+}
+
+
+/* ┌─╴╭─╮╭╮╷╶┬╴╭─╴
+   ├─╴│ ││││ │ ╰─╮
+   ╵  ╰─╯╵╰╯ ╵ ╶─╯ */
 @font-face {
     font-family: "Open Sans";
     src: url("fonts/OpenSans-Light-webfont.woff") format("woff");

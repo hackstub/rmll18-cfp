@@ -90,7 +90,7 @@ function setSourceBlockHeight() {
 }
 
 function duplicateNodes() {
-    var main = document.getElementsByClassName('main')[0].cloneNode(true);
+    var main = document.getElementsByTagName('SECTION')[0].cloneNode(true);
     var source = document.getElementById('source');
     source.appendChild(main);
 }
