@@ -52,6 +52,47 @@ strong {
     top: -5px;
 }
 
+
+/* BASE SECTIONS */
+#source {
+    font-family: "Space Mono";
+    font-size: 0.65rem;
+    /* background-color: #dffffd; */
+    /* background-color: #ffffaa; */
+    background-color: #ffdaff;
+    display: none;
+}
+#trad {
+    width: 80%;
+    height: 100%;
+    background-color: white;
+    /* opacity: 0.5; */
+}
+
+main {
+    width: 80%;
+}
+section {
+    width: 100%;
+}
+#source section {
+    position: relative;
+}
+#source section:after {
+    content: "section";
+    font-size: 0.6rem;
+    font-weight: bold;
+    position: absolute;
+    background-color: white;
+    width: 3.5rem;
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    right: -3.5rem;
+    top: 0;
+}
+
+
 /* MENU */
 nav {
     position: fixed;
@@ -111,46 +152,6 @@ nav a:link, nav a:visited {
 nav a:hover, nav a:active {
     color: #8400ff;
     outline: none;
-}
-
-
-/* BASE SECTIONS */
-#source {
-    font-family: "Space Mono";
-    font-size: 0.65rem;
-    /* background-color: #dffffd; */
-    /* background-color: #ffffaa; */
-    background-color: #ffdaff;
-    display: none;
-}
-#trad {
-    width: 80%;
-    height: 100%;
-    background-color: white;
-    /* opacity: 0.5; */
-}
-
-main {
-    width: 80%;
-}
-section {
-    width: 100%;
-}
-#source section {
-    position: relative;
-}
-#source section:after {
-    content: "section";
-    font-size: 0.6rem;
-    font-weight: bold;
-    position: absolute;
-    background-color: white;
-    width: 3.5rem;
-    height: 1rem;
-    line-height: 1rem;
-    text-align: center;
-    right: -3.5rem;
-    top: 0;
 }
 
 
@@ -219,12 +220,25 @@ section {
 h2 {
     position: relative;
     margin-top:8rem;
-    margin-bottom:4rem;
-    font-size:4rem;
+    margin-bottom:0;
+    font-size:3.75rem;
     font-weight:600;
+}
+h2#date_limite {
+    color:white;
+    text-stroke: 2px black;
+    -webkit-text-stroke: 2px black;
+    margin-top:0;
+    margin-bottom:4rem;
+    font-size:3.75rem;
 }
 #source h2 {
     background-color: #ffda00;
+    font-size:3.25rem;
+}
+#source h2#date_limite {
+    color:#ffda00;
+    font-size:3.25rem;
 }
 #source h2:before {
     font-size: 0.65rem;
@@ -239,6 +253,11 @@ h2 {
     left: -2.5rem;
 }
 
+#source h2#date_limite:before {
+    content:inherit;
+}
+
+
 .main h3:first-of-type {
     margin-top:8rem;
 }
@@ -248,7 +267,7 @@ h3 {
     margin-bottom:2rem;
     font-size:2.25rem;
     font-weight:600;
-    background-color: red;
+    /* background-color: red; */
 }
 #source h3 {
     position: relative;
@@ -273,6 +292,9 @@ h4 {
     font-size:1.5rem;
     font-weight:600;
 }
+h4:before {
+    content: "• ";
+}
 #source h4 {
     position: relative;
     background-color: #b6ffaa;
@@ -288,6 +310,17 @@ h4 {
     line-height: 1rem;
     text-align: center;
     left: -2.5rem;
+}
+#source h4::after {
+    font-size: 0.6rem;
+    content: "before:content: \"•\"";
+    font-weight: normal;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #ffffaa;
+    color: black;
+    padding: 0 0.5rem;
 }
 h4:not(:nth-of-type(5)) {
     margin-top:3rem;
@@ -326,6 +359,7 @@ article h5:first-child {
 main p {
     padding: 0;
     margin-bottom: 1rem;
+    text-align: justify;
 }
 
 #source p {
@@ -360,6 +394,34 @@ main p {
     color: white;
     padding: 0 0.5rem;
 }
+#source a {
+    color:inherit;
+    text-decoration:none;
+    pointer-events: none;
+    /* cursor:text; */
+}
+#source a:before {
+    font-size: 0.6rem;
+    content: "a";
+    font-weight: bold;
+    position: relative;
+    /* background-color: #6dffff; */
+    /* color: black; */
+    /* background-color: #3366BB; */
+    /* color: white; */
+    /* background-color: #3366BB; */
+    /* color: white; */
+    background-color:#ff0000;
+    color:white;
+    width: 2.5rem;
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    left:0;
+    top:0;
+    padding:0 0.5rem;
+}
+
 
 #source .margin {
     background-color: #ffff00;
@@ -382,9 +444,71 @@ main p {
 article {
     width:47%;
 }
-
+article p {
+    text-align: left;
+}
+article u{
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    /* text-decoration-style: dotted; */
+}
+#source u:before {
+font-size: 0.6rem;
+content: "u";
+font-weight: bold;
+position: relative;
+text-decoration:none;
+/* background-color: #6dffff; */
+/* color: black; */
+/* background-color: #3366BB; */
+/* color: white; */
+/* background-color: #3366BB; */
+/* color: white; */
+background-color:#ff0000;
+color:white;
+width: 2.5rem;
+height: 1rem;
+line-height: 1rem;
+text-align: center;
+left:0;
+top:0;
+padding:0 0.5rem;
+}
 .main ul {
     margin-bottom:1rem;
+}
+#source ul {
+    position:relative;
+    border: 1px solid #ff0000;
+}
+#source ul:before {
+    font-size: 0.6rem;
+    content: "ul";
+    font-weight: bold;
+    position: absolute;
+    background-color: #ff0000;
+    color: white;
+    width: 2.5rem;
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    left: -2.5rem;
+    top: -1px;
+}
+#source li:before {
+font-size: 0.6rem;
+content: "li";
+font-weight: bold;
+position: relative;
+background-color:#ff0000;
+color:white;
+width: 2.5rem;
+height: 1rem;
+line-height: 1rem;
+text-align: center;
+left:0;
+top:0;
+padding:0 0.5rem;
 }
 acronym {
     text-decoration: none;
@@ -392,10 +516,67 @@ acronym {
 i {
     font-style: italic;
 }
+#source i:before {
+    font-size: 0.6rem;
+    content: "i";
+    font-weight: bold;
+    font-style: normal;
+    position: relative;
+    background-color:#ff0000;
+    color:white;
+    width: 2.5rem;
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    left:0;
+    top:0;
+    padding:0 0.5rem;
+}
 mark{
     background-color: black;
     color:white;
 }
+#source mark {
+    background-color: inherit;
+    color:inherit;
+}
+#source mark:before {
+    font-size:1.5rem;
+    content: "m";
+    font-weight: bold;
+    font-style: normal;
+    position: relative;
+    background-color:#ff0000;
+    color:white;
+    width: 2.5rem;
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    left:0;
+    top:0;
+    padding:0 0.5rem;
+}
+#source q:before {
+    font-size: 0.6rem;
+    content: "q";
+    font-weight: bold;
+    position: relative;
+    background-color:#ff0000;
+    color:white;
+    width: 2.5rem;
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    left:0;
+    top:0;
+    padding:0 0.5rem;
+}
+sup{
+    /* line-height:1; */
+    font-size:0.8rem;
+    vertical-align: text-top;
+}
+
 
 /* FONTS */
 @font-face {
