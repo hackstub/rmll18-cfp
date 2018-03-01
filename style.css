@@ -65,7 +65,7 @@ main {
 
 #source {
     font-family: "Space Mono";
-    font-size: 0.65rem;
+    font-size: 0.6rem;
     /* background-color: #dffffd; */
     /* background-color: #ffffaa; */
     background-color: #ffdaff;
@@ -138,7 +138,7 @@ nav div {
 nav > p {
     position: fixed;
 }
-nav > p a {
+#lang a {
     font-style: italic;
     display: inline-block;
     background-color: white;
@@ -166,6 +166,17 @@ nav a:hover, nav a:active {
     outline: none;
 }
 
+#read {
+    display:inline-block;
+    border:1px dashed #8400ff;
+    text-align: center;
+}
+
+#read a{
+    text-decoration:none;
+}
+
+
 @media (orientation: landscape) and (min-width: 1025px) {
     nav {
         top: 0;
@@ -186,6 +197,12 @@ nav a:hover, nav a:active {
     nav > p {
         right: 1.5rem;
         bottom: 1.5rem;
+    }
+
+    #read {
+    right:1.5rem;
+    bottom:3.75rem;
+    padding:0.1em;
     }
 }
 
@@ -218,6 +235,17 @@ nav a:hover, nav a:active {
         bottom: 0;
         right: 0
     }
+    #read {
+    left:0;
+    bottom:0;
+    width:6.75rem;
+    /* padding:0.1em; */
+    }
+    #read a {
+    color:black;
+    background-color:#ffdaff;
+    }
+
 }
 
 
@@ -439,9 +467,10 @@ main p {
     background-color: #8400ff;
     color: white;
     top: -1px;
+    padding:0;
 }
 #source p::after {
-    content: 'class="normal"';
+    content: 'font="normal 1rem Open Sans"';
     background-color: black;
     color: white;
 }
@@ -536,7 +565,7 @@ mark{
     color:inherit;
 }
 #source mark::before {
-    font-size:1.5rem;
+    font-size:1.5rem !important;
     content: "m";
     font-style: normal;
     background-color:#ff0000;
@@ -550,7 +579,16 @@ mark{
 sup{
     /* line-height:1; */
     font-size:0.8rem;
-    vertical-align: text-top;
+    vertical-align:super;
+}
+#source sup {
+    font-size:0.6rem;
+    vertical-align:inherit;
+}
+#source sup:before {
+    content: "sup";
+    background-color:#ff0000;
+    color:white;
 }
 
 
@@ -564,7 +602,7 @@ sup{
     font-size: 0.6rem;
 }
 #source section > *::before,
-#source section div > *::before {
+#source section article > *::before {
     position: absolute;
     width: 2.5rem;
     left: -2.5rem;
@@ -574,7 +612,8 @@ sup{
     padding:0 0.5rem;
 }
 
-#source section > *::after {
+#source section > *::after,
+#source section article > *::after {
     position: absolute;
     font-size: 0.6rem;
     font-weight: normal;
@@ -583,7 +622,6 @@ sup{
     padding: 0 0.5rem;
     /* height: 1rem; */
     line-height: 1rem;
-
 }
 
 
