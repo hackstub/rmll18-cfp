@@ -123,17 +123,17 @@ function setSourceBlockHeight() {
     function uniformHeigth(base, adapt, orientation) {
         // Adapt each given elements height to its base clone
         for (var i = 0, b, a; b = base[i], a = adapt[i]; i++) {
-            if (!portrait) {
-                a.style.height = b.getBoundingClientRect().height + 'px';
+            if (orientation) {
+                a.style.height = b.getBoundingClientRect().width + 'px';
             }
             else {
-                a.style.height = b.getBoundingClientRect().width + 'px';;
+                a.style.height = b.getBoundingClientRect().height + 'px';
             }
         }
     }
 
     var titles = document.getElementsByTagName('HEADER');
-    uniformHeigth(titles[1].children, titles[0].children)
+    uniformHeigth(titles[1].children, titles[0].children, true)
 
     var tags = ['P', 'H2', 'H3', 'H4', 'H5', 'UL']
     tags.forEach(function (tag) {
