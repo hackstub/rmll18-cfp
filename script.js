@@ -11,8 +11,8 @@ slider.addEventListener('mousedown', sliderListener);
 slider.addEventListener('touchstart', sliderTouchListener);
 
 window.addEventListener('scroll', function (e) {
-    trad.scrollTop = e.pageY != undefined ? e.pageY : document.body.scrollTop;
-});
+    trad.scrollTop = e.pageY || document.body.scrollTop || window.scrollY;
+}, { passive: true });
 
 window.addEventListener('resize', update);
 document.getElementById('button').onclick = displayMenu;
