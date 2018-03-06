@@ -50,8 +50,8 @@ li::before {
     position: fixed;
     cursor: row-resize;
 }
-#slider::before {
-    content: '< >';
+#slider::before,
+#slider::after {
     position: absolute;
     text-align: center;
     font-family: "Space Mono";
@@ -60,12 +60,20 @@ li::before {
     height: 1rem;
     color: white;
     background-color: black;
-    width: 2rem;
-    transform: rotate(90deg);
-    -ms-transform: rotate(90deg); /* IE 9 */
-    -webkit-transform: rotate(90deg); /* Safari */
-    left: calc(50% - 1rem);
-    top: -5px;
+    padding: 3px;
+    width: 5.5rem;
+    left: calc(50% - 2.75rem);
+}
+#slider::before {
+    content: '/ Lecture \\';
+    top: -20px;
+    
+}
+#slider::after {
+    content: '\\ @Hacker /';
+    top: 5px;
+    padding-top: 6px;
+    border-top: solid 1px white;
 }
 
 main {
