@@ -68,29 +68,29 @@ li::before {
     top: -5px;
 }
 
+html {
+    background-color: #ffdaff;
+}
 main {
-    width: 80%;
+    width: 100%;
 }
 
 #source {
     font-family: "Space Mono";
     font-size: 0.75rem;
-    /* background-color: #dffffd; */
-    /* background-color: #ffffaa; */
-    background-color: #ffdaff;
     display: none;
 }
 #trad {
-    width: 80%;
+    width: 100%;
     height: 100%;
     background-color: white;
-    /* opacity: 0.5; */
 }
 
 section {
-    width: 75%;
-    margin-left:10%;
-    margin-top: 8rem;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5rem;
 }
 #source section {
     background-color: white;
@@ -109,36 +109,33 @@ section {
     top: 0;
 }
 
-@media (orientation: landscape) and (min-width: 1025px) {
+@media (orientation: landscape) {
     #trad, main, #slider {
         width: 80%;
     }
-}
-
-@media (max-width: 1024px) {
-    section {
-        margin:auto;
+    div section:first-of-type {
+        margin-top: 8rem;
     }
-
+    section {
+        width: 75%;
+        margin-left: 10%;
+    }
 }
 
-@media (orientation: portrait), (max-width: 1024px) {
+@media (orientation: portrait) {
     #trad, main, #slider {
         width: 100%;
     }
-
-    section {
-        margin-top:-25rem;
+    div section:first-of-type {
+        margin-top: 105vh;
+    }
+}
+@media (orientation: portrait) and (max-width: 700px) {
+    #source section::after {
+        display: none;
     }
 }
 
-@media (orientation: portrait) and (max-width: 768px) {
-    section {
-        width: 80%;
-        overflow-x: hidden;
-    }
-
-}
 
 /* ╭╮╮┌─╴╭╮╷╷ ╷
    │││├─╴││││ │
@@ -147,8 +144,10 @@ nav {
     position: fixed;
     background-color: black;
     color: white;
+    z-index: 1;
+    top: 0;
 }
-nav div {
+nav div:not(#lang) {
     padding: 1.5rem;
 }
 
@@ -161,18 +160,19 @@ nav div {
     display: inline-block;
     border-bottom: 4px solid black;
 }
-
-nav > p {
+#lang {
     position: fixed;
 }
+
 #lang a {
     font-style: italic;
     display: inline-block;
-    background-color: white;
-    color: black !important;
-    width: 2rem;
     text-align: center;
     text-decoration: none;
+}
+
+#menu li ul {
+    margin-top:0.5rem;
 }
 
 #menu > ul > li:not(:first-child) {
@@ -185,117 +185,80 @@ li ul {
     padding-left: 1rem;
 }
 
-nav a:link, nav a:visited {
+#menu a:link, #menu a:visited {
     color: white;
 }
-nav a:hover, nav a:active {
+#menu a:hover, #menu a:active {
     color: #8400ff;
     outline: none;
 }
 
 #read {
-    display:inline-block;
-    border:1px dashed #8400ff;
-    text-align: center;
-}
-
-#read a{
+    position: fixed;
     text-decoration:none;
 }
 
-
-@media (orientation: landscape) and (min-width: 1025px) {
+@media (orientation: portrait) {
     nav {
-        top: 0;
-        right: 0;
-        height: 100vh;
-        width: 20%;
-    }
-    nav div:last-of-type {
-        padding-top: 0;
-    }
-    #date {
-        font-size: 2.4vw;
-    }
-    #menu-button {
-        display: none;
-    }
-
-    nav > p {
-        right: 1.5rem;
-        bottom: 1.5rem;
-    }
-
-    #read {
-        right:1.5rem;
-        bottom:3.75rem;
-        padding:0.1em;
-    }
-}
-
-@media (orientation: landscape) and (max-width: 1024px) {
-    #button, #date, #rmll, #menu, #lang, #read {
-        /* font-size: 2.4vw; */
-        font-size: 1.2em !important;
-    }
-    #read {
-        width:8rem !important;
-    }
-}
-
-
-@media (orientation: portrait), (max-width: 1024px) {
-    nav {
-        z-index: 1;
         width: 100%;
+        font-size: 1.2rem;
     }
-    nav div {
-        padding: 1rem;
-    }
-    #menu-button {
+    #button {
         position: absolute;
-        padding: 0;
-        right: 0.6rem;
-        top: 0.6rem;
-    }
-    #menu-button a {
-        color: black;
-        font-weight: bold;
         text-decoration: underline;
-        font-size: 0.8rem;
+        right: 1.5rem;
     }
     #menu {
         display: none;
-        padding-bottom: 3rem;
+        padding-bottom: 3rem !important;
     }
-    #rmll {
+    nav li {
+        line-height: 2rem;
+    }
+    #read {
+        background-color: black;
+        bottom: 0;
+        padding: 0.3rem 0.5rem;
+    }
+    #lang {
+        bottom: 0;
+        right: 0;
+    }
+    #lang a {
+        color: white;
+        background-color: black;
+        padding: 0.3rem 0.5rem;
+    }
+}
+@media (orientation: landscape) {
+    nav {
+        width: 20%;
+        height: 100%;
+        right: 0;
+    }
+    #button {
         display: none;
     }
-
-    nav > p {
-        bottom: 0;
-        right: 0
-    }
     #read {
-        left:0;
-        bottom:0;
-        width:6.75rem;
-        background-color:#ffdaff;
-        /* padding:0.1em; */
+        border:1px dashed #8400ff;
+        bottom:3.5rem;
+        right:1.5rem;
     }
-    #read a {
-        color:black;
+    #lang {
+        bottom: 1.5rem;
+        right: 1.5rem;
     }
+    #lang a {
+        color: black;
+        background-color: white;
+        width:2rem;
+    }
+}
 
-    #button, #date, #rmll, #menu, #lang, #read {
-        /* font-size: 2.4vw; */
-        font-size: 1.4em !important;
+@media (orientation: landscape) and (max-height: 700px)  {
+    nav li ul {
+        display: none;
     }
-
-    #read {
-        width:10rem !important;
-    }
-
 }
 
 
@@ -328,16 +291,16 @@ header div {
     }
 
     .t1 {
-        font-size: 8vw;
+        font-size: 7vw;
         line-height:16vh;
     }
     #source .t1 {
-        font-size: 8vw;
+        font-size: 7vw;
         line-height:16vh;
     }
 
     .t2 {
-        font-size: 5vw;
+        font-size: 4vw;
         line-height:12vh;
     }
     #source .t2 {
@@ -347,35 +310,17 @@ header div {
 }
 
 @media (orientation: portrait) {
-    /* header {
-        margin-left: 0;
-        height: 100vw;
-        width: 80vh;
-        position: relative;
-        top: 20vh;
-        left: 100vw;
-
-        transform: rotate(90deg);
-        -ms-transform: rotate(90deg);/
-        -webkit-transform: rotate(90deg);
-        transform-origin: top left;
-
-        margin-bottom: 50rem;
-    } */
     header {
-        margin-left: 0;
         height: 100vw;
-        width: 85vh;
-        position: relative;
-        right: 85vh;
-        top: 10vh;
+        width: 95vh;
+        position: absolute;
+        right: 100vw;
+        top: 0;
 
         transform: rotate(-90deg);
         -ms-transform: rotate(-90deg);
         -webkit-transform: rotate(-90deg);
         transform-origin: top right;
-
-        margin-bottom: 50rem;
     }
     .t1 {
         font-size: 8vh;
@@ -525,7 +470,6 @@ main p {
     position: relative;
     font-family: 'Space Mono';
     border: 1px solid #8400ff;
-    /* padding: 0.3rem; */
 }
 #source p::before {
     content: "p";
@@ -539,18 +483,16 @@ main p {
     background-color: black;
     color: white;
 }
+#source .info p::after {
+    content: none;
+}
 #source a {
     color:inherit;
     text-decoration:none;
     pointer-events: none;
-    /* cursor:text; */
 }
 #source a::before {
     content: "a";
-    /* background-color: #3366BB; */
-    /* color: white; */
-    /* background-color: #3366BB; */
-    /* color: white; */
 }
 
 .articles {
@@ -567,17 +509,10 @@ article {
 article u {
     text-decoration: underline;
     text-decoration-style: dashed;
-    /* text-decoration-style: dotted; */
 }
 #source u::before {
     content: "u";
     text-decoration:none;
-    /* background-color: #6dffff; */
-    /* color: black; */
-    /* background-color: #3366BB; */
-    /* color: white; */
-    /* background-color: #3366BB; */
-    /* color: white; */
 }
 #source u {
     text-decoration: none;
@@ -599,7 +534,10 @@ section ul {
 
 #source li::before {
     content: "li";
+    background-color: #ff0000;
+    color: white;
 }
+
 
 mark{
     background-color: black;
@@ -636,25 +574,30 @@ em {
     content:"em";
 }
 
+.marge-remerciements {
+    margin-top:3rem;
+}
 
 @media (orientation: landscape) {
-    main p {
+    #trad p {
         text-align: justify;
-        text-justify:auto;
+        text-justify: auto;
     }
 }
 
-@media (orientation: portrait) and (max-width:768px) {
+@media (orientation: portrait) and (max-width:768px),
+(orientation: landscape) and (max-width:1280px) {
     .articles {
         display:block;
+    }
+    article h5:first-child {
+        margin-top:2rem;
     }
 
     article {
         width:100%;
     }
 }
-
-
 
 
 /* ╭─╴╭─╮╷ ╷┌─╮╭─╴┌─╴   ┌─╮╭─╴┌─╴╷ ╷┌─╮╭─╮   ┌─╴╷  ┌─╴╭╮╮╭─╴
@@ -666,7 +609,7 @@ em {
     line-height: 1rem;
     font-size: 0.75rem;
 }
-#source a::before, #source u::before, #source li::before, #source mark::before, #source q::before, #source strong::before, #source em::before {
+#source a::before, #source u::before, #source mark::before, #source q::before, #source strong::before, #source em::before {
     background-color:#6dffff;
     color:black;
 }
@@ -681,7 +624,8 @@ em {
 #source p > *::before,
 #source ul > *::before,
 #source li > *::before,
-#source strong > *::before {
+#source strong > *::before,
+#source em > *::before {
     padding:0 0.5rem;
 }
 
@@ -693,7 +637,6 @@ em {
     bottom: 0;
     right: 0;
     padding: 0 0.5rem;
-    /* height: 1rem; */
     line-height: 1rem;
 }
 
@@ -701,18 +644,8 @@ em {
 /* ┌─╴╭─╮╭╮╷╶┬╴╭─╴
    ├─╴│ ││││ │ ╰─╮
    ╵  ╰─╯╵╰╯ ╵ ╶─╯ */
-@font-face {
-    font-family: "Open Sans";
-    src: url("fonts/OpenSans-Light-webfont.woff") format("woff");
-    font-weight: 300;
-    font-style: normal;
-}
-@font-face {
-    font-family: "Open Sans";
-    src: url("fonts/OpenSans-LightItalic-webfont.woff") format("woff");
-    font-weight: 300;
-    font-style: italic;
-}
+
+/* OPEN SANS */
 @font-face {
     font-family: "Open Sans";
     src: url("fonts/OpenSans-Regular-webfont.woff") format("woff");
@@ -743,13 +676,8 @@ em {
     font-weight: 700;
     font-style: normal;
 }
-@font-face {
-    font-family: "Open Sans";
-    src: url("fonts/OpenSans-BoldItalic-webfont.woff") format("woff");
-    font-weight: 700;
-    font-style: italic;
-}
 
+/* SPACE MONO */
 @font-face {
     font-family: "Space Mono";
     src: url("fonts/SpaceMono-Regular-webfont.woff") format("woff");
@@ -766,11 +694,5 @@ em {
     font-family: "Space Mono";
     src: url("fonts/SpaceMono-Bold-webfont.woff") format("woff");
     font-weight: 700;
-    font-style: italic;
-}
-@font-face {
-    font-family: "Space Mono";
-    src: url("fonts/SpaceMono-BoldItalic-webfont.woff") format("woff");
-    font-weight: 700;
-    font-style: italic;
+    font-style: normal;
 }
