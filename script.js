@@ -46,7 +46,7 @@ function update() {
     if (portrait) {
         changeHeight(h / 1.3);
     } else {
-        changeHeight(h / 1.8);
+        changeHeight(h / 1.4);
     }
     setSourceBlockHeight();
 }
@@ -144,7 +144,7 @@ function setSourceBlockHeight() {
 }
 
 function duplicateNodes() {
-    var main = document.getElementsByTagName('SECTION')[0].cloneNode(true);
+    var main = document.getElementsByTagName('SECTION')[2].cloneNode(true);
     var source = document.getElementById('source');
     source.appendChild(main);
 }
