@@ -1,9 +1,8 @@
-'use strict';
-
 var trad = document.getElementById('trad');
 var source = document.getElementById('source');
 var slider = document.getElementById('slider');
 var rmllMention = document.getElementById('rmll');
+var readOnly = document.getElementById('read');
 var h, w, portrait;
 
 window.onload = init;
@@ -16,11 +15,7 @@ slider.addEventListener('touchstart', sliderTouchListener);
 
 window.addEventListener('scroll', adaptScroll, { passive: true });
 
-// 'Read only' button, totally hide the source
-document.getElementById('read').onclick = function () {
-    slider.style.bottom = '-5px';
-    trad.style.height = '100%';
-}
+readOnly.addEventListener('mouseenter', readOnlyPreview);
 
 function init() {
     duplicateNodes();
@@ -115,6 +110,30 @@ function adaptScroll(e) {
     else if (rmllDisplay === 'none' && scroll <= h) {
         rmllMention.style.display = 'block';
     }
+}
+
+function readOnlyPreview() {
+    function removeListeners() {
+        readOnly.removeEventListener('mouseleave', leave);
+        readOnly.removeEventListener('click', removeListeners);
+    }
+    function fixTradHeight() {
+        clearTimeout(reset);
+        changeHeight(h);
+        removeListeners();
+    }
+
+    var bot = slider.style.bottom;
+    var height = trad.style.height;
+    changeHeight(h);
+
+    var reset = setTimeout(function() {
+        slider.style.bottom = bot;
+        trad.style.height = height;
+    }, 300);
+
+    readOnly.addEventListener('click', fixTradHeight);
+    readOnly.addEventListener('mouseleave', removeListeners);
 }
 
 function changeHeight(y) {
