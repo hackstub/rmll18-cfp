@@ -33,6 +33,9 @@ footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, a
 a {
     outline:none;
 }
+a:hover {
+    cursor: pointer;
+}
 ul {
     list-style: none;
 }
@@ -122,6 +125,7 @@ section {
     }
 }
 
+
 @media (orientation: portrait) {
     #trad, main, #slider {
         width: 100%;
@@ -153,12 +157,15 @@ nav div:not(#lang) {
 
 #date {
     font-family: "Space Mono";
+    font-size: 2.3vw;
+    line-height: 3vw;
     color: black;
     background-color: #8400ff;
+    padding-bottom:2rem !important;
 }
 #date span {
     display: inline-block;
-    border-bottom: 4px solid black;
+    border-bottom: 0.3rem solid black;
 }
 #lang {
     position: fixed;
@@ -259,6 +266,69 @@ li ul {
     nav li ul {
         display: none;
     }
+}
+
+/* special case */
+@media (orientation: landscape) and (max-height: 550px),
+(orientation: landscape) and (max-width: 799px)  {
+     nav {
+         width:100%;
+        height:auto;
+    }
+    #date {
+        padding:0.8rem !important;
+    }
+    #button {
+        display: inline;
+        position: absolute;
+        text-decoration: underline;
+        right: 1.5rem;
+    }
+    #rmll {
+        padding:0.8rem !important;
+    }
+    #menu {
+        display: none;
+        padding-bottom: 3rem !important;
+    }
+    nav li {
+        line-height: 2rem;
+    }
+    #read {
+        background-color: black;
+        bottom: 0;
+        padding: 0.3rem 0.5rem;
+        left:0;
+        right:auto;
+    }
+    #lang {
+        bottom: 0;
+        right: 0;
+    }
+    #lang a {
+        color: white;
+        background-color: black;
+        padding: 0.3rem 0.5rem;
+    }
+
+    #trad, main, #slider {
+        width: 100%;
+    }
+    section {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+@media (orientation: portrait) and (max-width: 400px)  {
+    #date {
+        font-size: 5vw;
+        line-height: 6vw;
+    }
+    #date span {
+        border-bottom: 0.2em solid black;
+    } */
 }
 
 
@@ -500,9 +570,6 @@ main p {
     display:flex;
     justify-content: space-between;
 }
-.articles p {
-    text-align: left;
-}
 article {
     width:47%;
 }
@@ -575,11 +642,11 @@ em {
 }
 
 .marge-remerciements {
-    margin-top:3rem;
+    margin-top:6rem;
 }
 
 @media (orientation: landscape) {
-    #trad p {
+    #trad p:not(.articles p) {
         text-align: justify;
         text-justify: auto;
     }
