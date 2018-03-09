@@ -15,7 +15,7 @@ slider.addEventListener('touchstart', sliderTouchListener);
 
 window.addEventListener('scroll', adaptScroll, { passive: true });
 
-readOnly.addEventListener('mouseenter', readOnlyPreview);
+readOnly.addEventListener('click', readOnlyView);
 
 function init() {
     duplicateNodes();
@@ -112,28 +112,20 @@ function adaptScroll(e) {
     }
 }
 
-function readOnlyPreview() {
-    function removeListeners() {
-        readOnly.removeEventListener('mouseleave', leave);
-        readOnly.removeEventListener('click', removeListeners);
-    }
-    function fixTradHeight() {
-        clearTimeout(reset);
+function readOnlyView(e) {
+    var color = readOnly.style.backgroundColor;
+    if (color === 'black' || color === '') {
+        readOnly.style.backgroundColor = '#8400ff';
         changeHeight(h);
-        removeListeners();
     }
-
-    var bot = slider.style.bottom;
-    var height = trad.style.height;
-    changeHeight(h);
-
-    var reset = setTimeout(function() {
-        slider.style.bottom = bot;
-        trad.style.height = height;
-    }, 300);
-
-    readOnly.addEventListener('click', fixTradHeight);
-    readOnly.addEventListener('mouseleave', removeListeners);
+    else {
+        readOnly.style.backgroundColor = 'black';
+        if (portrait) {
+            changeHeight(h / 1.15);
+        } else {
+            changeHeight(h / 1.4);
+        }
+    }
 }
 
 function changeHeight(y) {

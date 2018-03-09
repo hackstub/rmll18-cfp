@@ -203,6 +203,7 @@ li ul {
 #read {
     position: fixed;
     text-decoration:none;
+    background-color: black;
 }
 
 @media (orientation: portrait) {
@@ -223,7 +224,6 @@ li ul {
         line-height: 2rem;
     }
     #read {
-        background-color: black;
         bottom: 0;
         padding: 0.3rem 0.5rem;
     }
@@ -295,7 +295,6 @@ li ul {
         line-height: 2rem;
     }
     #read {
-        background-color: black;
         bottom: 0;
         padding: 0.3rem 0.5rem;
         left:0;
