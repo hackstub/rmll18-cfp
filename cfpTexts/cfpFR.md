@@ -1,15 +1,22 @@
+<meta keywords ="rmll, 2018, rencontres, mondiales, logiciel, libre, software, meeting, strasbourg, education, numérique, captivité, émancipation, liberation, festival">
+<meta description="Les Rencontres Mondiales du Logiciel Libre 2018, à Strasbourg du 7 au 12 juillet, un festival transdisciplinaire ouvert à toutes et à tous.">
+
+# RMLL 2018
+# Rencontres Mondiales du Logiciel Libre
+## « Éducation numérique : fabrique de la captivité ou nouvelle émancipation »
+
 *Cette page web est composée de deux couches aux proportions ajustables.  
 Celle du dessous est une représentation non exhaustive de sa structure ([HTML](https://fr.wikipedia.org/wiki/Hypertext_Markup_Language#Description_de_HTML){target="\_blank"}) et des différents effets graphiques ([CSS](https://fr.wikipedia.org/wiki/Feuilles_de_style_en_cascade){target="\_blank"}) appliqués à ses éléments.  
 Celle du dessus en est l'interprétation que fait le navigateur. Elle est destinée à la lecture.*
 
 ## Appel à participations 2018 {#intro}
-## Date limite le 15 avril {#date_limite}
+## Date limite le 15 avril {#deadline}
 
 Chaque année, les Rencontres Mondiales du Logiciel Libre (RMLL) permettent aux grand débutants comme aux techniciens confirmés de se rencontrer pendant plusieurs jours pour promouvoir, discuter, développer, utiliser et questionner les outils et la culture numérique libre.
 
 Cette année, les RMLL se tiendront, pour la seconde fois depuis leur création, à l'Université de Strasbourg, du 7 au 12 juillet 2018.
 
-Nous lançons cet appel afin que chacun et chacune apporte sa contribution ! Nous vous remercions de lire avec attention cet appel. Les détails précis sur les lieux et le déroulé viendront au fur et à mesure. Pour tout besoin d'information supplémentaire, n'hésitez donc pas à nous contacter par e-mail à l'adresse [contact-rmll2018@alsace.netlib.re](mailto:contact-rmll2018@alsace.netlib.re).
+Nous lançons cet appel afin que chacun et chacune apporte sa contribution ! Nous vous remercions de lire avec attention cet appel. Les détails précis sur les lieux et le déroulé viendront au fur et à mesure. Pour tout besoin d'information supplémentaire, n'hésitez donc pas à nous contacter par e-mail à l'adresse contact-rmll2018 [at] alsace.netlib.re.
 
 
 ### Choix et orientation de cette édition 2018 {#edition2018}
@@ -25,7 +32,7 @@ Au delà de cette thématique centrale, nous souhaitons souligner le caractère 
 Votre participation aux RMLL 2018 pourra s'inscrire dans l'un des grands thèmes suivants (il est normal qu'elle en concerne plusieurs). Il est évident que ces thèmes, arbitraires, se divisent eux-mêmes en un nombre incalculable de sous-thèmes dont il ne tient qu'à vous de vous saisir, et que l'on précisera une fois le programme bouclé !
 
 #### Initiation
-contact : [initiation@listes2018.rmll.info](mailto:initiation@listes2018.rmll.info)
+contact : initiation [at] listes2018.rmll.info
 
 Il est essentiel de permettre à tout le monde de s'approprier le Libre de manière accessible, stimulante, amusante, sensible.  
 Nous y encouragerons toutes les pédagogies qui visent à tirer parti de la diversité des approches des individus, quels que soient leurs âges.  
@@ -34,12 +41,12 @@ Le **week-end des 7 et 8 juillet** seront principalement axés sur l'initiation 
 Ex : un salon « Apprendre la musique en codant » pourrait rassembler des développeurs de logiciels de live-coding avec des enseignants et des enfants.
 
 #### Technique
-contact : [technique@listes2018.rmll.info](mailto:technique@listes2018.rmll.info)
+contact : technique [at] listes2018.rmll.info
 
 Les RMLL 2018 ne seraient pas des RMLL sans moments dédiés à la technique. Les Rencontres doivent permettre des émulations concrètes autant que des mises-en-lumière d'avancées actuelles. Toutes les pratiques (développement, administration système, réseau, électronique, making, etc.) sont combinables avec tous les domaines (bureautique, santé, domotique, graphisme, réseaux sociaux, etc.). Nous souhaitons promouvoir le décloisonnement des publics participants, dans l'intérêt des projets et des communautés. Merci ainsi de penser le niveau de compétences requis pour votre activité.
 
 #### Société
-contact : [societe@listes2018.rmll.info](mailto:societe@listes2018.rmll.info)
+contact : societe [at] listes2018.rmll.info
 
 Un groupe d'humains se définit par ce qu'il partage, ce qui lui est commun. En ouvrant l'accès à ces œuvres et leur création, nous redéfinissons nos communautés autour de ressources communes. Réfléchir à nos rapports à l'information, c'est aussi repenser la philosophie qui sous-tend nos outils juridiques, techniques et sociologiques : notre façon d'appréhender les technologies.  
 Peut-on contrôler nos institutions sans libre accès à leurs données ? Peut-on faire de la recherche sans un accès à l'ensemble du savoir humain ?  
@@ -47,12 +54,12 @@ Peut-on être maître de soi-même sans maîtriser ses données, ses plateformes
 Notre identité n'est-elle pas elle-même information ?
 
 #### Arts et culture
-contact : [arts@listes2018.rmll.info](mailto:arts@listes2018.rmll.info)
+contact : arts [at] listes2018.rmll.info
 
 La culture libre regroupe l'ensemble des éléments que constitue les pratiques et esthétiques qui défendent le partage et la réappropriation comme valeurs essentielle. Elle touche ainsi le cinéma, le jeu-vidéo, la musique, le théâtre, la littérature, etc. Les RMLL sont l'occasion de promouvoir les licences libres comme des méthodes de création à part entière et ainsi questionner des pratiques artistiques, des modes de diffusion et l'ensemble de l'économie culturelle.
 
 
-### Lieux {#places}
+### Lieux {#location}
 
 L'Université de Strasbourg accueille les RMLL 2018 dans les bâtiments de l'Escarpe, de l'Atrium et du Platane, tous séparés de quelques dizaines de mètres par un bâtiment entre chacun d'eux.
 
@@ -81,7 +88,7 @@ Ces RMLL seront articulées autour de « fils rouges » (ou *tracks*). Le fil ro
 
 #### Évènements
 
-Chaque événement sera rattaché à un ou plusieurs des quatre thèmes que nous venons de présenter : Initiation, Technique, Société, et Arts et culture. Nous proposons les formats d'évènements suivants :
+Chaque événement sera rattaché à un ou plusieurs des quatre thèmes que nous venons de présenter : **Initiation**, **Technique**, **Société**, et **Arts et culture**. Nous proposons les formats d'évènements suivants :
 
 <div class="articles" markdown=1>
 <article>
@@ -131,12 +138,13 @@ Si votre idée ne correspond à aucune case proposée, ce n'est pas un problème
 </div>
 
 #### Village associatif
+contact: village [at] listes2018.rmll.info
 
 Comme chaque année, le Village du Libre prendra place pendant le week-end grand public et tout au long des RMLL. Il y accueillera des acteurs exclusivement associatifs.  
 C'est maintenant une habitude : ce village associatif est coordonné par Bookynette.
 
 #### Radio RMLL
-contact : [radio@listes2018.rmll.info](mailto:radio@listes2018.rmll.info)
+contact : radio [at] listes2018.rmll.info
 
 La radio des RMLL rassemblera cette année des équipes de plusieurs radios, réseaux et collectifs de radio dans une démarche analogue à celle de l'ensemble des RMLL 2018.  
 Elle sera donc programmée à partir d'une combinaison de formats et d'approches (éditoriales et artistiques) tout au long du festival.  
@@ -145,7 +153,7 @@ En plus d'une diffusion sur internet (direct et podcasts), nous prévoyons une f
 
 ### Comment répondre à cet appel {#participate}
 
-Nous mettrons à disposition un formulaire de réponse **à partir du 15 mars sur [rmll2018.info](https://rmll2018.info){target="\_blank"}**. Il vous est possible de proposer un événement précis, mais également un fil rouge complet (sous conditions). D'ici là, nous vous invitons à potasser votre idée à la lumière des renseignements ci-dessous. Vous aurez ensuite <mark>jusqu'au 15 avril 2018 à minuit</mark> pour proposer votre idée. Il vous sera demandé d'anticiper le plus précisément possible votre public et vos besoins d'équipements électriques, mobiliers, audiovisuels et réseau. Avant de vous proposer vous-même pour un format, prenez le temps de penser à toutes les autres personnes que celles habituellement représentées lors de ce type d'évènements.
+Nous mettrons à disposition un formulaire de réponse **à partir du 15 mars** sur [2018.rmll.info](https://2018.rmll.info){target="\_blank"}. Il vous est possible de proposer un événement précis, mais également un fil rouge complet (sous conditions). D'ici là, nous vous invitons à potasser votre idée à la lumière des renseignements ci-dessous. Vous aurez ensuite <mark>jusqu'au 15 avril 2018 à minuit</mark> pour proposer votre idée. Il vous sera demandé d'anticiper le plus précisément possible votre public et vos besoins d'équipements électriques, mobiliers, audiovisuels et réseau. Avant de vous proposer vous-même pour un format, prenez le temps de penser à toutes les autres personnes que celles habituellement représentées lors de ce type d'évènements.
 
 Au-delà de la date limite, vous pourrez rejoindre les salles autogérées qui seront laissées à disposition pendant le festival. Nous étudierons les propositions incomplètes ou nécessitant des modifications dans la limite du raisonnable. Notre disponibilité étant limitée, une spontanéité et une autonomie de votre part dans l'organisation sera plus qu'appréciable !
 
@@ -163,9 +171,9 @@ Nous accepterons les formats francophones, anglophones et germanophones. Pour to
 
 ##### Captation audiovisuelle
 
-Par défaut, des captations vidéos de vos interventions pourront être effectuées et archivées plus tard sur les vidéos des RMLL. Si vous le souhaitez, vous pourrez refuser ces captations. Par défaut, nous utiliserons la licence EUPL 1.2, de type copyleft, compatible avec de nombreuses autres et traduite en 23 langues. Vous pouvez néanmoins demander à ce que votre captation soit diffusé sous une autre licence.
+Par défaut, des captations vidéos de vos interventions pourront être effectuées et archivées plus tard sur les vidéos des RMLL. Si vous le souhaitez, vous pourrez refuser ces captations. Par défaut, nous utiliserons la licence [EUPL 1.2](https://fr.wikipedia.org/wiki/Licence_publique_de_l%27Union_europ%C3%A9enne), de type copyleft, compatible avec de nombreuses autres et traduite en 23 langues. Vous pouvez néanmoins demander à ce que votre captation soit diffusé sous une autre licence.
 
-<p class="marge-remerciements">Merci d'avoir survécu à la lecture de cet appel à propositions. Nous espérons recevoir des propositions nombreuses et enthousiasmantes !</p>
+<p class="thx-margin">Merci d'avoir survécu à la lecture de cet appel à propositions. Nous espérons recevoir des propositions nombreuses et enthousiasmantes !</p>
 
 Cordialibrement,
 
@@ -175,7 +183,7 @@ la nouvelle équipe RMLL Strasbourg
 
 + IRC : #rmll-2018 sur irc.freenode.net - [client web](https://webchat.freenode.net/){target="\_blank"}
 + Mastodon : [@rmll2018@mamot.fr](https://mamot.fr/@rmll2018){target="\_blank"}
-+ Mail : [contact@listes2018.rmll.info](mailto:contact@listes2018.rmll.info)
++ Mail : contact [at] listes2018.rmll.info
 
 #### Presse {#press}
 
@@ -196,8 +204,8 @@ La [Free Software Foundation Europe](https://fsfe.org/){target="\_blank"} soutie
 
 <ul markdown=1>Fonts :
 <li>[Open Sans](http://www.opensans.com/){target="\_blank"} disponible sous la licence [Apache License, Version 2.0](https://github.com/googlefonts/opensans/blob/master/LICENSE.txt){target="\_blank"} ;</li>
-<li>[Space Mono](https://www.colophon-foundry.org/custom/spacemono/){target="\_blank"} disponible sous la licence [SIL Open Font License v1.1](https://github.com/googlefonts/spacemono/blob/master/LICENSE.txt){target="\_blank"} ;</li>
+<li>[Space Mono](https://www.colophon-foundry.org/custom/spacemono/){target="\_blank"} disponible sous la licence [SIL Open Font License v1.1](https://github.com/googlefonts/spacemono/blob/master/LICENSE.txt){target="\_blank"}.</li>
 </ul>
 
 Les [textes ainsi que le code source](https://github.com/hackstub/rmll18-landpage){target="\_blank"} de ce site sont disponibles sour la licence [EUPL v1.2](https://joinup.ec.europa.eu/sites/default/files/custom-page/attachment/eupl_v1.2_en.pdf){target="\_blank"}.  
-Graphisme : [Marjorie Ober](http://marjorieober.com/){target="\_blank"} & [Nicolas Chesnais](https://autre.space/){target="\_blank"}.
+graphisme et développement : [Marjorie Ober](http://marjorieober.com/){target="\_blank"} & [Nicolas Chesnais](https://autre.space/){target="\_blank"}.

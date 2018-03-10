@@ -93,7 +93,7 @@ section {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 5rem;
+    margin-bottom: 10rem;
 }
 #source section {
     background-color: white;
@@ -320,14 +320,14 @@ li ul {
 }
 
 
-@media (orientation: portrait) and (max-width: 400px)  {
+@media (orientation: portrait) and (max-width: 550px)  {
     #date {
         font-size: 5vw;
         line-height: 6vw;
     }
     #date span {
         border-bottom: 0.2em solid black;
-    } */
+    }
 }
 
 
@@ -416,7 +416,7 @@ h2 {
     font-size:3.75rem;
     font-weight:600;
 }
-h2#date_limite {
+h2#deadline {
     color:white;
     text-stroke: 2px black;
     -webkit-text-stroke: 2px black;
@@ -428,7 +428,7 @@ h2#date_limite {
     background-color: #ffda00;
     font-size:3.25rem;
 }
-#source h2#date_limite {
+#source h2#deadline {
     color:#ffda00;
     font-size:3.25rem;
 }
@@ -437,7 +437,7 @@ h2#date_limite {
     background-color: #ffda00;
 }
 
-#source h2#date_limite::before {
+#source h2#deadline::before {
     content:inherit;
 }
 
@@ -508,13 +508,13 @@ article h5:first-child {
 }
 
 @media (orientation: landscape) and (max-width: 1024px) {
-    #source h2#date_limite {
+    #source h2#deadline {
         font-size:3rem;
     }
 }
 
 @media (orientation: portrait) and (max-width: 1024px) {
-    #source h2, #source h2#date_limite {
+    #source h2, #source h2#deadline {
         font-size:3rem;
     }
 
@@ -640,14 +640,18 @@ em {
     content:"em";
 }
 
-.marge-remerciements {
+.thx-margin {
     margin-top:6rem;
 }
 
 @media (orientation: landscape) {
-    #trad p:not(.articles p) {
+    #trad p {
         text-align: justify;
         text-justify: auto;
+    }
+    #trad .articles p {
+        text-align: left;
+        text-justify: none;
     }
 }
 
