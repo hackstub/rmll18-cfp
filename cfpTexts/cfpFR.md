@@ -171,7 +171,7 @@ Nous accepterons les formats francophones, anglophones et germanophones. Pour to
 
 ##### Captation audiovisuelle
 
-Par défaut, des captations vidéos de vos interventions pourront être effectuées et archivées plus tard sur les vidéos des RMLL. Si vous le souhaitez, vous pourrez refuser ces captations. Par défaut, nous utiliserons la licence [EUPL 1.2](https://fr.wikipedia.org/wiki/Licence_publique_de_l%27Union_europ%C3%A9enne), de type copyleft, compatible avec de nombreuses autres et traduite en 23 langues. Vous pouvez néanmoins demander à ce que votre captation soit diffusé sous une autre licence.
+Par défaut, des captations vidéos de vos interventions pourront être effectuées et archivées plus tard sur les vidéos des RMLL. Si vous le souhaitez, vous pourrez refuser ces captations. Par défaut, nous utiliserons la licence [EUPL 1.2](https://fr.wikipedia.org/wiki/Licence_publique_de_l%27Union_europ%C3%A9enne){target="\_blank"}, de type copyleft, compatible avec de nombreuses autres et traduite en 23 langues. Vous pouvez néanmoins demander à ce que votre captation soit diffusé sous une autre licence.
 
 <p class="thx-margin">Merci d'avoir survécu à la lecture de cet appel à propositions. Nous espérons recevoir des propositions nombreuses et enthousiasmantes !</p>
 
@@ -198,7 +198,7 @@ Progressivement initiée au long de multiples collaborations depuis 2014, la fé
 
 #### Free Software Foundation Europe (FSFE)
 
-La [Free Software Foundation Europe](https://fsfe.org/){target="\_blank"} soutient les RMLL 2018 notamment par l'organisation d'un fil rouge complet. Basée en Allemagne, la FSFE est une association à but non lucratif qui donne aux utilisateurs les moyens de contrôler la technologie.
+La [Free Software Foundation Europe](https://fsfe.org/){target="\_blank"} soutient les RMLL 2018 notamment par l'organisation d'un fil rouge complet. La FSFE est une association à but non lucratif qui donne aux utilisateurs les moyens de contrôler la technologie.
 
 ### Crédits
 

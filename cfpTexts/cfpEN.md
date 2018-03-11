@@ -164,7 +164,7 @@ The new team of LSM Strasbourg
 
 #### Press {#press}
 
-To receive the press releases and other informations, please suscribe here: [https://listes2018.rmll.info/subscribe/presse](https://listes2018.rmll.info/subscribe/presse)
+To receive the press releases and other informations, please suscribe here: [https://listes2018.rmll.info/subscribe/presse](https://listes2018.rmll.info/subscribe/presse){target="\_blank"}
 
 ### alsace.netlib.re, the Libre and Hack Alsatian Federation
 
@@ -174,7 +174,7 @@ The 2018 edition of LSM is presented to you by [alsace.netlib.re](https://alsace
 
 #### Free Software Foundation Europe (FSFE)
 
-The [Free Software Foundation Europe](https://fsfe.org/){target="\_blank"} supports the LSM 2018 by organizing a full track among other things. Based in Germany, the Free Software Foundation Europe is a charity that empowers users to control technology.
+The [Free Software Foundation Europe](https://fsfe.org/){target="\_blank"} supports the LSM 2018 by organizing a full track among other things. The Free Software Foundation Europe is a charity that empowers users to control technology.
 
 ### Credits
 
