@@ -6,6 +6,7 @@ The top one is the interpretation made by your browser. It is dedicated to readi
 
 ## Call for participation 2018 {#intro}
 ## Deadline April 15 {#deadline}
+#### [Application form](https://rmll2018.info/cfp){target="\_blank"}
 
 The yearly Libre Software Meeting (LSM) is an opportunity for beginners as well as veteran technicians to meet during several days to promote, discuss, develop, use and interrogate the Libre technologies, tools and culture.
 
@@ -132,7 +133,7 @@ We're planning a live internet stream, podcasts as well as a temporary radio fre
 
 ### How to respond to this call {#participate}
 
-We will be asked to fill a web-form which will be released on **March 15** on [2018.rmll.info](https://2018.rmll.info){target="\_blank"}. You can intent to organize a precise event, or a whole track (under conditions). Meanwhile we invite you to think about your idea with the hints provided here. You will then be able to send your intent to us until <mark>april 15, 12pm</mark>. We will ask you to define as precisely as possible what kind of public your proposal targets, what are the technical requirements (power, network access, radio or video broadcasting, fournitures). Also, before submitting a proposal yourself, please think about people from all under-represented gender/communities in such kind of events that you can find around you that may submit the same kind of reply as you and try to prioritize them.
+Thank you to apply to this call for participation by filling the form available [here](https://rmll2018.info/cfp){target="\_blank"}. You can intent to organize a precise event, or a whole track (under conditions). Meanwhile we invite you to think about your idea with the hints provided here. You will then be able to send your intent to us until <mark>april 15, 12pm</mark>. We will ask you to define as precisely as possible what kind of public your proposal targets, what are the technical requirements (power, network access, radio or video broadcasting, fournitures). Also, before submitting a proposal yourself, please think about people from all under-represented gender/communities in such kind of events that you can find around you that may submit the same kind of reply as you and try to prioritize them.
 
 Beyond the deadline, you'll be able to join the self-organized rooms which will be available during the festival. We will discuss the incomplete proposals as much as we can.  
 Our availability being limited, a spontaneity and autonomy from you in this organisation will be more than great!

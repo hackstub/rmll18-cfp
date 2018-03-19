@@ -11,6 +11,7 @@ Celle du dessus en est l'interprétation que fait le navigateur. Elle est destin
 
 ## Appel à participations 2018 {#intro}
 ## Date limite le 15 avril {#deadline}
+#### [Formulaire de réponse](https://rmll2018.info/cfp){target="\_blank"}
 
 Chaque année, les Rencontres Mondiales du Logiciel Libre (RMLL) permettent aux grand débutants comme aux techniciens confirmés de se rencontrer pendant plusieurs jours pour promouvoir, discuter, développer, utiliser et questionner les outils et la culture numérique libre.
 
@@ -153,7 +154,7 @@ En plus d'une diffusion sur internet (direct et podcasts), nous prévoyons une f
 
 ### Comment répondre à cet appel {#participate}
 
-Nous mettrons à disposition un formulaire de réponse **à partir du 15 mars** sur [2018.rmll.info](https://2018.rmll.info){target="\_blank"}. Il vous est possible de proposer un événement précis, mais également un fil rouge complet (sous conditions). D'ici là, nous vous invitons à potasser votre idée à la lumière des renseignements ci-dessous. Vous aurez ensuite <mark>jusqu'au 15 avril 2018 à minuit</mark> pour proposer votre idée. Il vous sera demandé d'anticiper le plus précisément possible votre public et vos besoins d'équipements électriques, mobiliers, audiovisuels et réseau. Avant de vous proposer vous-même pour un format, prenez le temps de penser à toutes les autres personnes que celles habituellement représentées lors de ce type d'évènements.
+Merci de répondre à cet appel en remplissant le formulaire disponible à [cette adresse](https://rmll2018.info/cfp){target="\_blank"}. Il vous est possible de proposer un événement précis, mais également un fil rouge complet (sous conditions). D'ici là, nous vous invitons à potasser votre idée à la lumière des renseignements ci-dessous. Vous aurez ensuite <mark>jusqu'au 15 avril 2018 à minuit</mark> pour proposer votre idée. Il vous sera demandé d'anticiper le plus précisément possible votre public et vos besoins d'équipements électriques, mobiliers, audiovisuels et réseau. Avant de vous proposer vous-même pour un format, prenez le temps de penser à toutes les autres personnes que celles habituellement représentées lors de ce type d'évènements.
 
 Au-delà de la date limite, vous pourrez rejoindre les salles autogérées qui seront laissées à disposition pendant le festival. Nous étudierons les propositions incomplètes ou nécessitant des modifications dans la limite du raisonnable. Notre disponibilité étant limitée, une spontanéité et une autonomie de votre part dans l'organisation sera plus qu'appréciable !
 
