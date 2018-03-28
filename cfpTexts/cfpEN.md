@@ -6,7 +6,7 @@ The top one is the interpretation made by your browser. It is dedicated to readi
 
 ## Call for participation 2018 {#intro}
 ## Deadline April 15 {#deadline}
-#### [Application form](https://rmll2018.info/cfp){target="\_blank"}
+[Application form](https://rmll2018.info/cfp){target="\_blank"} {#form}
 
 The yearly Libre Software Meeting (LSM) is an opportunity for beginners as well as veteran technicians to meet during several days to promote, discuss, develop, use and interrogate the Libre technologies, tools and culture.
 

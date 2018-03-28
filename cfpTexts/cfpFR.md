@@ -11,7 +11,7 @@ Celle du dessus en est l'interprétation que fait le navigateur. Elle est destin
 
 ## Appel à participations 2018 {#intro}
 ## Date limite le 15 avril {#deadline}
-#### [Formulaire de réponse](https://rmll2018.info/cfp){target="\_blank"}
+[Formulaire de réponse](https://rmll2018.info/cfp){target="\_blank"} {#form}
 
 Chaque année, les Rencontres Mondiales du Logiciel Libre (RMLL) permettent aux grand débutants comme aux techniciens confirmés de se rencontrer pendant plusieurs jours pour promouvoir, discuter, développer, utiliser et questionner les outils et la culture numérique libre.
 

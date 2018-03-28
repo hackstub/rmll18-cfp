@@ -95,6 +95,7 @@ section {
     margin-right: auto;
     margin-bottom: 10rem;
 }
+
 #source section {
     background-color: white;
     position: relative;
@@ -110,6 +111,10 @@ section {
     text-align: center;
     right: -3.5rem;
     top: 0;
+}
+
+div section:first-of-type {
+    margin-bottom: 0;
 }
 
 @media (orientation: landscape) {
@@ -132,6 +137,7 @@ section {
     }
     div section:first-of-type {
         margin-top: 105vh;
+        margin-bottom: 0;
     }
 }
 @media (orientation: portrait) and (max-width: 700px) {
@@ -421,7 +427,6 @@ h2#deadline {
     text-stroke: 2px black;
     -webkit-text-stroke: 2px black;
     margin-top:0;
-    margin-bottom:4rem;
     font-size:3.75rem;
 }
 #source h2 {
@@ -441,6 +446,11 @@ h2#deadline {
     content:inherit;
 }
 
+#form {
+    margin-top:1rem;
+    margin-bottom:5rem;
+    font-size:1.5rem;
+}
 
 section h3:first-of-type {
     margin-top:8rem;
